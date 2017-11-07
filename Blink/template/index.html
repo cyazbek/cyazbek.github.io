@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="Blink Staffing">
+		<meta name="author" content="">
+		<title>Blink Staffing</title>
+		<link rel="shortcut icon" href="images/favicon.png">
+
+		<!-- Main Stylesheet -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body id="home">
+
+		<!-- ============ PAGE LOADER START ============ -->
+
+		<div id="loader">
+			<i class="fa fa-cog fa-4x fa-spin"></i>
+		</div>
+
+		<!-- ============ PAGE LOADER END ============ -->
+
+		<!-- ============ NAVBAR START ============ -->
+
+		<div class="fm-container">
+			<!-- Menu -->
+			<div class="menu">
+				<div class="button-close text-right">
+					<a class="fm-button"><i class="fa fa-close fa-2x"></i></a>
+				</div>
+				<ul class="nav">
+					<li class="active"><a href="#home">Home</a></li>
+					<li><a href="ba-jobs.html">Brand Ambassador</a></li>
+					<li><a href="am-jobs.html">Job Manager</a></li>
+					<li><a class="link-register">Register</a></li>
+					<li><a class="link-login">Login</a></li>
+				</ul>
+			</div>
+			<!-- end Menu -->
+		</div>
+
+		<!-- ============ NAVBAR END ============ -->
+
+		<!-- ============ HEADER START ============ -->
+
+		<header>
+			<div id="header-background"></div>
+			<div class="container">
+				<div class="pull-left">
+					<div id="logo"><a href="index.html"><img src="images/w_logo_with_slogan.png" alt="Jobseek - Job Board Responsive HTML Template" /></a></div>
+				</div>
+				<div id="menu-open" class="pull-right">
+					<a class="fm-button"><i class="fa fa-bars fa-lg"></i></a>
+				</div>
+			</div>
+		</header>
+
+		<!-- ============ HEADER END ============ -->
+
+		<!-- ============ SLIDES START ============ -->
+
+		<div id="slider" class="sl-slider-wrapper">
+
+			<div class="sl-slider">
+
+				<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+					<div class="sl-slide-inner">
+						<div class="bg-img bg-img-1"></div>
+						<div class="tint"></div>
+						<div class="slide-content">
+							<h2>Looking for a jobs?</h2>
+							<h3>There’s no better place to start</h3>
+							<p><a href="ba-jobs.html" class="btn btn-lg btn-default">Find a job</a></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+					<div class="sl-slide-inner">
+						<div class="bg-img bg-img-2"></div>
+						<div class="tint"></div>
+						<div class="slide-content">
+							<h2>Need brand ambassadors?</h2>
+							<h3>We've got perfect candidates</h3>
+							<p><a href="am-candidates.html" class="btn btn-lg btn-default">Post a job</a></p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<nav id="nav-arrows" class="nav-arrows">
+				<span class="nav-arrow-prev">Previous</span>
+				<span class="nav-arrow-next">Next</span>
+			</nav>
+
+			<nav id="nav-dots" class="nav-dots">
+				<span class="nav-dot-current"></span>
+				<span></span>
+			</nav>
+
+		</div>
+
+		<!-- ============ SLIDES END ============ -->
+
+		<!-- ============ LOGIN START ============ -->
+
+		<div class="popup" id="login">
+			<div class="popup-form">
+				<div class="popup-header">
+					<a class="close"><i class="fa fa-remove fa-lg"></i></a>
+					<h2>Login</h2>
+				</div>
+				<form onsubmit="validateUser()">
+					<ul class="social-login">
+						<li><a class="btn btn-facebook"><i class="fa fa-facebook"></i>Sign In with Facebook</a></li>
+						<li><a class="btn btn-google"><i class="fa fa-google-plus"></i>Sign In with Google</a></li>
+						<li><a class="btn btn-linkedin"><i class="fa fa-linkedin"></i>Sign In with LinkedIn</a></li>
+					</ul>
+					<hr>
+					<div class="form-group">
+						<label for="login-username">Username</label>
+						<input type="text" class="form-control" id="login-username">
+					</div>
+					<div class="form-group">
+						<label for="login-password">Password</label>
+						<input type="password" class="form-control" id="login-password">
+					</div>
+					<button type="submit" class="btn btn-primary">Sign In</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- ============ LOGIN END ============ -->
+
+		<!-- ============ REGISTER START ============ -->
+
+		<div class="popup" id="register">
+			<div class="popup-form">
+				<div class="popup-header">
+					<a class="close"><i class="fa fa-remove fa-lg"></i></a>
+					<h2>Register</h2>
+				</div>
+				<form>
+					<ul class="social-login">
+						<li><a class="btn btn-facebook"><i class="fa fa-facebook"></i>Register with Facebook</a></li>
+						<li><a class="btn btn-google"><i class="fa fa-google-plus"></i>Register with Google</a></li>
+						<li><a class="btn btn-linkedin"><i class="fa fa-linkedin"></i>Register with LinkedIn</a></li>
+					</ul>
+					<hr>
+					<div class="form-group">
+						<label for="register-name">Name</label>
+						<input type="text" class="form-control" id="register-name">
+					</div>
+					<div class="form-group">
+						<label for="register-surname">Surname</label>
+						<input type="text" class="form-control" id="register-surname">
+					</div>
+					<div class="form-group">
+						<label for="register-email">Email</label>
+						<input type="email" class="form-control" id="register-email">
+					</div>
+					<hr>
+					<div class="form-group">
+						<label for="register-username">Username</label>
+						<input type="text" class="form-control" id="register-username">
+					</div>
+					<div class="form-group">
+						<label for="register-password1">Password</label>
+						<input type="password" class="form-control" id="register-password1">
+					</div>
+					<div class="form-group">
+						<label for="register-password2">Repeat Password</label>
+						<input type="password" class="form-control" id="register-password2">
+					</div>
+					<button type="submit" class="btn btn-primary">Register</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- ============ REGISTER END ============ -->
+
+		<!-- Modernizr Plugin -->
+		<script src="js/modernizr.custom.79639.js"></script>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery-1.11.2.min.js"></script>
+
+		<!-- Bootstrap Plugins -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- Retina Plugin -->
+		<script src="js/retina.min.js"></script>
+
+		<!-- ScrollReveal Plugin -->
+		<script src="js/scrollReveal.min.js"></script>
+
+		<!-- Flex Menu Plugin -->
+		<script src="js/jquery.flexmenu.js"></script>
+
+		<!-- Slider Plugin -->
+		<script src="js/jquery.ba-cond.min.js"></script>
+		<script src="js/jquery.slitslider.js"></script>
+
+		<!-- Carousel Plugin -->
+		<script src="js/owl.carousel.min.js"></script>
+
+		<!-- Parallax Plugin -->
+		<script src="js/parallax.js"></script>
+
+		<!-- Counterup Plugin -->
+		<script src="js/jquery.counterup.min.js"></script>
+		<script src="js/waypoints.min.js"></script>
+
+		<!-- No UI Slider Plugin -->
+		<script src="js/jquery.nouislider.all.min.js"></script>
+
+		<!-- Bootstrap Wysiwyg Plugin -->
+		<script src="js/bootstrap3-wysihtml5.all.min.js"></script>
+
+		<!-- Flickr Plugin -->
+		<script src="js/jflickrfeed.min.js"></script>
+
+		<!-- Fancybox Plugin -->
+		<script src="js/fancybox.pack.js"></script>
+
+		<!-- Magic Form Processing -->
+		<script src="js/magic.js"></script>
+
+		<!-- jQuery Settings -->
+		<script src="js/settings.js"></script>
+
+		<script type="text/javascript">
+				function validateUser(){
+					location.href('/jobs.html');
+				}
+		</script>
+
+	</body>
+</html>
