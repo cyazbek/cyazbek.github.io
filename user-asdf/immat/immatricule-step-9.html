@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>6831 - Immatricule Commercant</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="../css-js/saaq-components.css">
+
+  <style>
+    .footer {
+      position: relative;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      bottom: 0;
+      width: 100%;
+      border-style: solid solid solid solid;
+      border-width: 1px;
+      border-color: #007676;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="bx--grid">
+    <div class="bx--row">
+      <div class="bx--col-md-12">
+        <br />
+        <br />
+        <br />
+        <nav class="bx--breadcrumb bx--breadcrumb--no-trailing-slash" aria-label="breadcrumb">
+          <div class="bx--breadcrumb-item">
+            <a href="#" class="bx--link">Accueil</a>
+          </div>
+          <div class="bx--breadcrumb-item">
+            <a href="#" class="bx--link">Immatriculer</a>
+          </div>
+          <div class="bx--breadcrumb-item">
+            <a href="#" class="bx--link">Nouvelle immatriculation</a>
+          </div>
+          <div class="bx--breadcrumb-item">
+          </div>
+        </nav>
+
+        <nav role="navigation" aria-label="Interior Left Navigation" data-interior-left-nav onclick="toggleSideNav()" class="bx--interior-left-nav bx--interior-left-nav--collapseable">
+          <ul role="menubar" class="left-nav-list" data-interior-left-nav-list aria-label="left nav list" aria-hidden="false">
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link">
+                Immatriculer un véhicule
+              </a>
+            </li>
+            <li role="menuitem" tabindex="1" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link">
+                Consulter une plaque d'immatriculation
+              </a>
+            </li>
+            <li role="menuitem" tabindex="2" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link">
+                Annuler ou remplacer une plaque
+              </a>
+            </li>
+            <li role="menuitem" tabindex="3" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link">
+                Plaque personnalisée
+              </a>
+            </li>
+          </ul>
+          <div class="bx--interior-left-nav-collapse" data-interior-left-nav-collapse>
+            <a class="bx--interior-left-nav-collapse__link" href="#" aria-label="collapse nav pane">
+              <svg class="bx--interior-left-nav-collapse__arrow" width="8" height="12" viewBox="0 0 8 12" fill-rule="evenodd" data-interior-left-nav-arrow>
+                <title>Collapse nav pane</title>
+                <path d="M7.5 10.6L2.8 6l4.7-4.6L6.1 0 0 6l6.1 6z"></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+
+        <div class="bx--grid" id="main-content">
+          
+          <div class="bx--row">
+            <div class="bx--col-xs-8 ">
+              <h1>Immatriculer un véhicule</h1>
+              <br>
+              <br>
+            </div>
+          </div>
+          <div class="bx--row">
+            <div class="bx--col-xs-12">
+              <ul data-progress data-progress-current class="bx--progress">
+                <li class="bx--progress-step bx--progress-step--complete">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="12"></circle>
+                    <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
+                  </svg>
+                  <p class="bx--progress-label">Demande</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--complete">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="12"></circle>
+                    <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
+                  </svg>
+                  <p class="bx--progress-label">Client</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--complete">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="12"></circle>
+                    <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
+                  </svg>
+                  <p class="bx--progress-label">Véhicule</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--complete">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="12"></circle>
+                    <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
+                  </svg>
+                  <p class="bx--progress-label">Détails</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--complete">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="12"></circle>
+                    <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
+                  </svg>
+                  <p class="bx--progress-label">Coûts</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--complete">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="12"></circle>
+                    <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
+                  </svg>
+                  <p class="bx--progress-label">Paiement</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--complete">
+                  <svg width="24px" height="24px" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="12"></circle>
+                    <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
+                  </svg>
+                  <p class="bx--progress-label">Résumé</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--current">
+                  <svg>
+                    <circle cx="12" cy="12" r="12"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                  </svg>
+                  <p class="bx--progress-label">Confirmation</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- miniStep 1 - Raison pour remplacement -->
+          <div class="bx--row">
+            <div class="bx--col-xs-12">
+              <br />
+              <br />
+
+              <h5>La transaction a bien été conclue.</h5>
+              <br>
+              <p>Le numéro de confirmation est : SI-AYLA-2QL1.</p>
+              <br>
+              <p>Le véhicule est maintenant immatriculé au nom du client. Il peut circuler avec le véhicule.</p>
+
+              <br>
+              <br>
+              <br>
+
+            </div>
+          </div>
+
+          <div class="bx--row">
+              <div class="bx--col-xs-12">
+                <h5>Liste des documents à imprimer</h5>
+
+                <br>
+                <p>À remettre au client</p>
+                <br>
+                <button class="bx--btn bx--btn--primary" type="button">
+                    Preuve de service - Client — PDF
+                  <svg class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5 11l4.1-4.4.7.7L7 13 1.6 7.3l.7-.7L6.5 11V0h1v11zm5.5 4v-2h1v2c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1v-2h1v2h12z"></path>
+                  </svg>
+                </button>
+                <br><br>
+              <p class="bx--type-legal">Pour télécharger un document, vous devez installer
+                <a href="#">Adobe Acrobat Reader</a>. Ce logiciel est gratuit.</p>
+              <br>
+              <br><br>
+                </div>
+            </div>
+
+          <div class="bx--row">
+            <div class="bx--col-xs-12">
+              <h5>Certificat d'immatriculation</h5>
+              <br>
+              <p>Le client doit avoir une copie papier du certificat d’immatriculation avec lui lorsqu’il circule avec le véhicule. Sans ce certificat, il pourrait recevoir un constat d’infraction. Il doit également le signer.</p>
+              <br>
+              <button class="bx--btn bx--btn--primary" type="button">
+                  Certificat d’immatriculation de Ford ECOSport E SE 2018 #2HKRW2H58HH666295
+                <svg class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.5 11l4.1-4.4.7.7L7 13 1.6 7.3l.7-.7L6.5 11V0h1v11zm5.5 4v-2h1v2c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1v-2h1v2h12z"></path>
+                </svg>
+              </button>
+              <br>
+              <br>
+              <p class="bx--type-legal">Pour télécharger un document, vous devez installer
+                <a href="#">Adobe Acrobat Reader</a>. Ce logiciel est gratuit.</p>
+              <br>
+              <br>
+              <br><br>
+            </div>
+          </div>
+
+          <div class="bx--row">
+              <div class="bx--col-xs-12">
+                <h5>Immatriculation temporaire</h5>
+                <br>
+                <p>Pour que le client puisse circuler avec le véhicule, vous devez imprimer et coller sur la vitre arrière du véhicule l’immatriculation temporaire.</p>
+                <br>
+                <button class="bx--btn bx--btn--primary" type="button">
+                    Plaque temporaire Mercedes E550 2015 X2X 3B5 - #2710264271256392
+                  <svg class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5 11l4.1-4.4.7.7L7 13 1.6 7.3l.7-.7L6.5 11V0h1v11zm5.5 4v-2h1v2c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1v-2h1v2h12z"></path>
+                  </svg>
+                </button>
+                <br>
+                <br>
+                <p class="bx--type-legal">Pour télécharger un document, vous devez installer
+                  <a href="#">Adobe Acrobat Reader</a>. Ce logiciel est gratuit.</p>
+                <br>
+                <br>
+              </div>
+            </div>
+  
+            <div class="bx--row">
+                <div class="bx--col-xs-12">
+                  <br>
+                  <p>À conserver dans vos dossiers</p>
+                  <br>
+                  <button class="bx--btn bx--btn--primary" type="button">
+                      Preuve de service – SAAQ — PDF
+                    <svg class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.5 11l4.1-4.4.7.7L7 13 1.6 7.3l.7-.7L6.5 11V0h1v11zm5.5 4v-2h1v2c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1v-2h1v2h12z"></path>
+                    </svg>
+                  </button>
+                  <br><br>
+                  <button class="bx--btn bx--btn--primary" type="button">
+                      Preuve de service – Commerçant — PDF
+                    <svg class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.5 11l4.1-4.4.7.7L7 13 1.6 7.3l.7-.7L6.5 11V0h1v11zm5.5 4v-2h1v2c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1v-2h1v2h12z"></path>
+                    </svg>
+                  </button>
+                  <br><br>
+                  <button class="bx--btn bx--btn--primary" type="button">
+                      Preuve d’enregistrement — PDF
+                    <svg class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.5 11l4.1-4.4.7.7L7 13 1.6 7.3l.7-.7L6.5 11V0h1v11zm5.5 4v-2h1v2c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1v-2h1v2h12z"></path>
+                    </svg>
+                  </button>
+                  <br><br>
+                <p class="bx--type-legal">Pour télécharger un document, vous devez installer
+                  <a href="#">Adobe Acrobat Reader</a>. Ce logiciel est gratuit.</p>
+                <br>
+  
+                  </div>
+              </div>
+
+
+          <!-- <div class="bx--row">
+            <div class="bx--col-xs-12">
+              <h5>Plaque d'immatriculation temporaire</h5>
+              <br>
+              <br>
+              <p>Pour pouvoir circuler avec le véhicule, vous devez imprimer et coller sur la vitre arrière du véhicule la
+                plaque d'immatriculation temporaire.
+                <br />
+                <br />Votre nouvelle plaque d'immatriculation vous sera envoyé par la poste. Si vous ne l’avez pas reçu dans
+                10 jours, communiquez avec nous.</p>
+              <br>
+              <br>
+            </div>
+              <div class="bx--col-xs-2">
+                <div class="bx--tile">
+                  <h4>X2X ABC</h4>
+                </div>
+                <br>
+                <br>
+              </div>
+              <div class="bx--col-xs-10">
+                <br>
+              </div>
+              <div class="bx--col-xs-12">
+                  <button class="bx--btn bx--btn--primary" type="button">
+                    Plaque temporaire Mercedes
+                    <br> E550 2015 X2X 3B5 - #2710264271256392
+                    <svg class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.5 11l4.1-4.4.7.7L7 13 1.6 7.3l.7-.7L6.5 11V0h1v11zm5.5 4v-2h1v2c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1v-2h1v2h12z"></path>
+                    </svg>
+                  </button>
+                  <br>
+                  <br>
+                  <p class="bx--type-legal">Pour télécharger un document, vous devez installer
+                    <a href="#">Adobe Acrobat Reader</a>. Ce logiciel est gratuit.</p>
+                  <br>
+                  <br>
+                  <br>
+            </div>
+          </div> -->
+
+          <!-- <div class="bx--row">
+            <div class="bx--col-xs-12">
+              <h5>Certificat d'immatriculation</h5>
+              <br>
+              <br>
+            </div>
+            <div class="bx--col-xs-3">
+                <div class="bx--tile">
+                    <h2>Signature ici</h2>
+                  </div>
+                  <br>
+                  <br>
+            </div>
+            <div class="bx--col-sm-9"></div>
+            <div class="bx--col-xs-12">
+                <p>Il est important d’avoir une copie papier du certificat d’immatriculation avec vous lorsque vous circulez avec le véhicule. Sans ce certificat, vous pourriez recevoir un constat d’infraction. Assurez-vous également de le signer.</p>
+                <br>
+                <br>
+                <button class="bx--btn bx--btn--primary" type="button">
+                    Plaque temporaire Mercedes
+                    <br> E550 2015 X2X 3B5 - #2710264271256392
+                    <svg class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.5 11l4.1-4.4.7.7L7 13 1.6 7.3l.7-.7L6.5 11V0h1v11zm5.5 4v-2h1v2c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1v-2h1v2h12z"></path>
+                    </svg>
+                  </button>
+                  <br>
+                  <br>
+                  <p class="bx--type-legal">Pour télécharger un document, vous devez installer
+                      <a href="#">Adobe Acrobat Reader</a>. Ce logiciel est gratuit.</p>
+                    <br>
+                    <br>
+            </div>
+          </div> -->
+
+          <!-- <div class="bx--row">
+              <div class="bx--col-xs-12">
+                <h5>Votre plaque d’immatriculation à utilisée</h5>
+                <br>
+                <br>
+                <p>Pour pouvoir circuler avec le véhicule en utilisant votre plaque d’immatriculation.</p>
+                <br>
+                <br>
+              </div>
+                <div class="bx--col-xs-2">
+                  <div class="bx--tile">
+                    <h4>ABC 123</h4>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                </div>
+                <div class="bx--col-xs-10">
+                  <br>
+                </div>
+            </div> -->
+            
+          <!-- <div class="bx--row">
+                <div class="bx--col-xs-12">
+                  <h5>Certificat d'immatriculation</h5>
+                  <br>
+                  <br>
+                </div>
+                <div class="bx--col-xs-3">
+                    <div class="bx--tile">
+                        <h2>Signature ici</h2>
+                      </div>
+                      <br>
+                      <br>
+                </div>
+                <div class="bx--col-sm-9"></div>
+                <div class="bx--col-xs-12">
+                    <p>Il est important d’avoir une copie papier du certificat d’immatriculation avec vous lorsque vous circulez avec le véhicule. Sans ce certificat, vous pourriez recevoir un constat d’infraction. Assurez-vous également de le signer.</p>
+                    <br>
+                    <br>
+                    <button class="bx--btn bx--btn--primary" type="button">
+                        Plaque temporaire Mercedes
+                        <br> E550 2015 X2X 3B5 - #2710264271256392
+                        <svg class="bx--btn__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.5 11l4.1-4.4.7.7L7 13 1.6 7.3l.7-.7L6.5 11V0h1v11zm5.5 4v-2h1v2c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1v-2h1v2h12z"></path>
+                        </svg>
+                      </button>
+                      <br>
+                      <br>
+                      <p class="bx--type-legal">Pour télécharger un document, vous devez installer
+                          <a href="#">Adobe Acrobat Reader</a>. Ce logiciel est gratuit.</p>
+                        <br>
+                        <br>
+                </div>
+              </div> -->
+
+              <br>
+              <br>
+              <br>
+
+        </div>
+        <!-- End of div .bx--grid-->
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="scripts/libs/bootstrap/bootstrap.js"></script>
+  <script src="../css-js/saaq-components.js"></script>
+  <script>
+    var openSideNav = false;
+    toggleSideNav();
+
+    function toggleSideNav() {
+      //document.getElementById("mySidenav").style.width = "250px";
+      if (openSideNav == true) {
+        document.getElementById("main-content").style.marginLeft = "5%";
+        openSideNav = false;
+        console.log("NAV CLOSED");
+      } else {
+        document.getElementById("main-content").style.marginLeft = "17%";
+        openSideNav = true;
+        console.log("NAV OPENED");
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

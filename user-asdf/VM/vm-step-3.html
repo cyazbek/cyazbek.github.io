@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>0000 - VM</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="../css-js/saaq-components.css">
+
+  <style>
+    .footer {
+      position: relative;
+      margin-left: 10px;
+      margin-right: 10px;
+      bottom: 0;
+      width: 100%;
+      border-style: solid solid solid solid;
+      border-width: 1px;
+      border-color: #007676;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="bx--grid">
+    <div class="bx--row">
+      <div class="bx--col-md-12">
+        <br />
+        <br />
+        <br />
+        <nav class="bx--breadcrumb bx--breadcrumb--no-trailing-slash" aria-label="breadcrumb">
+          <div class="bx--breadcrumb-item">
+            <a href="#" class="bx--link">Accueil</a>
+          </div>
+          <div class="bx--breadcrumb-item">
+            <a href="#" class="bx--link">Immatriculer</a>
+          </div>
+          <div class="bx--breadcrumb-item">
+            <a href="#" class="bx--link">Nouvelle immatriculation</a>
+          </div>
+          <div class="bx--breadcrumb-item">
+          </div>
+        </nav>
+
+        <nav role="navigation" aria-label="Interior Left Navigation" data-interior-left-nav onclick="toggleSideNav()" class="bx--interior-left-nav bx--interior-left-nav--collapseable">
+          <ul role="menubar" class="left-nav-list" data-interior-left-nav-list aria-label="left nav list" aria-hidden="false">
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link">
+                Immatriculer un véhicule
+              </a>
+            </li>
+            <li role="menuitem" tabindex="1" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link">
+                Consulter une plaque d'immatriculation
+              </a>
+            </li>
+            <li role="menuitem" tabindex="2" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link">
+                Annuler ou remplacer une plaque
+              </a>
+            </li>
+            <li role="menuitem" tabindex="3" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link">
+                Plaque personnalisée
+              </a>
+            </li>
+          </ul>
+          <div class="bx--interior-left-nav-collapse" data-interior-left-nav-collapse>
+            <a class="bx--interior-left-nav-collapse__link" href="#" aria-label="collapse nav pane">
+              <svg class="bx--interior-left-nav-collapse__arrow" width="8" height="12" viewBox="0 0 8 12" fill-rule="evenodd" data-interior-left-nav-arrow>
+                <title>Collapse nav pane</title>
+                <path d="M7.5 10.6L2.8 6l4.7-4.6L6.1 0 0 6l6.1 6z"></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+
+        <div class="bx--grid" id="main-content">
+          
+          <div class="bx--row">
+            <div class="bx--col-xs-8 ">
+              <h1>Création d’un certificat CVM</h1>
+              <br>
+              <br>
+            </div>
+          </div>
+          <div class="bx--row">
+            <div class="bx--col-xs-12">
+              <ul data-progress data-progress-current class="bx--progress">
+                <li class="bx--progress-step bx--progress-step--current">
+                  <svg>
+                    <circle cx="12" cy="12" r="12"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                  </svg>
+                  <p class="bx--progress-label">Véhicule</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--incomplete">
+                  <svg>
+                    <circle cx="12" cy="12" r="12"></circle>
+                  </svg>
+                  <p class="bx--progress-label">Rapport</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--incomplete">
+                  <svg>
+                    <circle cx="12" cy="12" r="12"></circle>
+                  </svg>
+                  <p class="bx--progress-label">Conformité</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--incomplete">
+                  <svg>
+                    <circle cx="12" cy="12" r="12"></circle>
+                  </svg>
+                  <p class="bx--progress-label">Résumé</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--incomplete">
+                  <svg>
+                    <circle cx="12" cy="12" r="12"></circle>
+                  </svg>
+                  <p class="bx--progress-label">Confirmation</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- miniStep 1 - Raison pour remplacement -->
+          <div class="bx--row">
+            <div class="bx--col-xs-12">
+              <br />
+              <br /> 
+              <div class="bx--form-item">
+                  <label for="text-input-2" class="bx--label">Numéro de certificat de vérification mécanique (CVM) — optionnel</label>
+                  <input id="text-input-2" type="text" class="bx--text-input" placeholder="Inscrire le numéro de certificat de vérification mécanique">
+                </div>
+
+                <div class="bx--form-item">
+                    <label for="select-id-form" class="bx--label">Catégorie de véhicule</label>
+                    <ul data-dropdown data-value class="bx--dropdown" tabindex="0">
+                      <li class="bx--dropdown-text">Sélectionner la catégorie de véhicule</li>
+                      <svg class="bx--dropdown__arrow" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
+                        <path d="M10 0L5 5 0 0z"></path>
+                      </svg>
+                      <li>
+                        <ul class="bx--dropdown-list">
+                          <li data-option data-value="all" class="bx--dropdown-item">
+                            <a class="bx--dropdown-link" href="javascript:void(0)">Véhicule de promenade</a>
+                          </li>
+                          <li data-option data-value="cloudFoundry" class="bx--dropdown-item">
+                            <a class="bx--dropdown-link" href="javascript:void(0)">Moto</a>
+                          </li>
+                          <li data-option data-value="all" class="bx--dropdown-item">
+                              <a class="bx--dropdown-link" href="javascript:void(0)">Camion</a>
+                            </li>
+                            <li data-option data-value="all" class="bx--dropdown-item">
+                                <a class="bx--dropdown-link" href="javascript:void(0)">Autobus</a>
+                              </li>
+                              <li data-option data-value="all" class="bx--dropdown-item">
+                                  <a class="bx--dropdown-link" href="javascript:void(0)">Remorque ou semi-remorque</a>
+                                </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="bx--form-item">
+                      <label for="select-id-form" class="bx--label">Type de véhicule</label>
+                      <ul data-dropdown data-value class="bx--dropdown" tabindex="0">
+                        <li class="bx--dropdown-text">Sélectionner le type de véhicule</li>
+                        <svg class="bx--dropdown__arrow" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
+                          <path d="M10 0L5 5 0 0z"></path>
+                        </svg>
+                        <li>
+                          <ul class="bx--dropdown-list">
+                            <li data-option data-value="all" class="bx--dropdown-item">
+                              <a class="bx--dropdown-link" href="javascript:void(0)">Véhicule de promenade</a>
+                            </li>
+                            <li data-option data-value="cloudFoundry" class="bx--dropdown-item">
+                              <a class="bx--dropdown-link" href="javascript:void(0)">Taxi</a>
+                            </li>
+                            <li data-option data-value="all" class="bx--dropdown-item">
+                                <a class="bx--dropdown-link" href="javascript:void(0)">Véhicule pour une école de conduite</a>
+                              </li>
+                              <li data-option data-value="all" class="bx--dropdown-item">
+                                  <a class="bx--dropdown-link" href="javascript:void(0)">Véhicule d’urgence</a>
+                                </li>
+                                <li data-option data-value="all" class="bx--dropdown-item">
+                                    <a class="bx--dropdown-link" href="javascript:void(0)">Cyclomoteur</a>
+                                  </li>
+                                  <li data-option data-value="all" class="bx--dropdown-item">
+                                      <a class="bx--dropdown-link" href="javascript:void(0)">Motocyclette</a>
+                                    </li>
+                                    <li data-option data-value="all" class="bx--dropdown-item">
+                                        <a class="bx--dropdown-link" href="javascript:void(0)">Camion</a>
+                                      </li>
+                                      <li data-option data-value="all" class="bx--dropdown-item">
+                                          <a class="bx--dropdown-link" href="javascript:void(0)">Autobus</a>
+                                        </li>
+                                        <li data-option data-value="all" class="bx--dropdown-item">
+                                            <a class="bx--dropdown-link" href="javascript:void(0)">Minibus</a>
+                                          </li>
+                                          <li data-option data-value="all" class="bx--dropdown-item">
+                                              <a class="bx--dropdown-link" href="javascript:void(0)">Autobus d’écoliers</a>
+                                            </li>
+                                            <li data-option data-value="all" class="bx--dropdown-item">
+                                                <a class="bx--dropdown-link" href="javascript:void(0)">Autocar</a>
+                                              </li>
+                                              <li data-option data-value="all" class="bx--dropdown-item">
+                                                  <a class="bx--dropdown-link" href="javascript:void(0)">Remorque</a>
+                                                </li>
+                                                <li data-option data-value="all" class="bx--dropdown-item">
+                                                    <a class="bx--dropdown-link" href="javascript:void(0)">Semi-remorque</a>
+                                                  </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div></div>
+
+                    <br>
+
+            </div>
+          </div>
+
+          <div class="bx--row">
+            <div class="bx--col-xs-12">
+                <div data-content-switcher class="bx--content-switcher">
+                    <button class="bx--content-switcher-btn bx--btn--sm bx--content-switcher--selected" data-target=".demo--panel--opt-1">Québec</button>
+                    <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-2">Hors Québec</button>
+                    <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-3">Inconnu à la SAAQ</button>
+                  </div>
+                  <br>
+            </div>
+
+            <div class="bx--col-xs-8">
+              <div class="bx--form-item">
+                <label for="text-input-2" class="bx--label">Odomètre</label>
+                <input id="text-input-2" type="text" class="bx--text-input" placeholder="Inscrire le kilométrage à l’odomètres">
+              </div>
+            </div>
+            <div class="bx--col-xs-4">
+                <div class="bx--form-item">
+                    <label for="select-id-form" class="bx--label">Unité</label>
+                    <ul data-dropdown data-value class="bx--dropdown" tabindex="0">
+                      <li class="bx--dropdown-text">Kilomètres</li>
+                      <svg class="bx--dropdown__arrow" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
+                        <path d="M10 0L5 5 0 0z"></path>
+                      </svg>
+                      <li>
+                        <ul class="bx--dropdown-list">
+                          <li data-option data-value="all" class="bx--dropdown-item" selected>
+                            <a class="bx--dropdown-link" href="javascript:void(0)">Kilomètres</a>
+                          </li>
+                          <li data-option data-value="cloudFoundry" class="bx--dropdown-item">
+                            <a class="bx--dropdown-link" href="javascript:void(0)">Miles</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div></div>
+                  <br>
+            </div>
+            <div class="bx--col-xs-12">
+                <div class="bx--form-item">
+                  <label for="text-input-2" class="bx--label">Inscrire le kilométrage à l’odomètre</label>
+                  <input id="text-input-2" type="text" class="bx--text-input" placeholder="Inscrire le numéro de la plaque">
+                </div>
+                <div class="bx--form-item">
+                    <label for="text-input-2" class="bx--label">Numéro d’avis de vérification d’un véhicule routier (AVVR) — optionnel</label>
+                    <input id="text-input-2" type="text" class="bx--text-input" placeholder="Inscrire le numéro d’avis de vérification d’un véhicule routier">
+                  </div>
+                  <div></div>
+            </div>
+
+          </div>
+
+          <div class="bx--row">
+            <div class="bx--col-xs-12">
+              <br><br><br>
+              <div class="footer">
+                <div style="float: left;">
+                  <p style="margin-left:1em;margin-top:1em;"> Aide?
+                    <strong>Réponse.
+                      <a href="#" class="bx--link">Lien</a>
+                    </strong>
+                  </p>
+                </div>
+                <div style="text-align: right">
+                  <a href="immatricule-step-2.html" class="bx--link">Étape précèdente</a>
+                  <span style="margin-right: 4px; margin-bottom: 4px;"></span>
+                  <button class="bx--btn bx--btn--primary" onclick="window.location.href='vm-step-4.html'" style="margin:8px;" type="button">Passer à la prochaine étape</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- End of div .bx--grid-->
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="scripts/libs/bootstrap/bootstrap.js"></script>
+  <script src="../css-js/saaq-components.js"></script>
+  <script>
+    var openSideNav = false;
+    toggleSideNav();
+
+    function toggleSideNav() {
+      //document.getElementById("mySidenav").style.width = "250px";
+      if (openSideNav == true) {
+        document.getElementById("main-content").style.marginLeft = "5%";
+        openSideNav = false;
+        console.log("NAV CLOSED");
+      } else {
+        document.getElementById("main-content").style.marginLeft = "17%";
+        openSideNav = true;
+        console.log("NAV OPENED");
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
