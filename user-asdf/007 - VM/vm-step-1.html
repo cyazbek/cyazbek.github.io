@@ -4,8 +4,9 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>SAAQClic - Certificats</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
   <link rel="stylesheet" href="../css-js/saaq-components.css">
@@ -75,6 +76,7 @@ data = JSON.parse(JSON.stringify(data_1));
 <body>
   <div class="bx--grid">
     <div class="bx--row">
+
         <style>
             .header {
             position: fixed;
@@ -109,29 +111,39 @@ data = JSON.parse(JSON.stringify(data_1));
       <div class="bx--col-md-12">
         <br />
         <br />
-
+        <br />
+        <nav class="bx--breadcrumb bx--breadcrumb--no-trailing-slash" aria-label="breadcrumb">
+            <div class="bx--breadcrumb-item">
+              <a href="home-vm.html" class="bx--link">Accueil</a>
+            </div>
+            <div class="bx--breadcrumb-item">
+              <a href="vm-step-1.html" class="bx--link">Certificats</a>
+            </div>
+            <div class="bx--breadcrumb-item">
+            </div>
+        </nav>
         
         <nav role="navigation" aria-label="Interior Left Navigation" data-interior-left-nav onclick="toggleSideNav()" class="bx--interior-left-nav bx--interior-left-nav--collapseable">
           <ul role="menubar" class="left-nav-list" data-interior-left-nav-list aria-label="left nav list" aria-hidden="false">
             <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
-              <a class="left-nav-list__item-link" href="../home-commercant.html">
-                STH commerce québec
+              <a class="left-nav-list__item-link" href="home-vm.html">
+                STH commerce Québec
               </a>
             </li>
 
             <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
-              <a class="left-nav-list__item-link" href="../commercant-empty.html">
+              <a class="left-nav-list__item-link" href="empty.html">
                 Rôles &amp; Accès
               </a>
             </li>
 
             <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
-              <a class="left-nav-list__item-link" href="../commercant-empty.html">
+              <a class="left-nav-list__item-link" href="empty.html">
                 Factures
               </a>
             </li>
               <li role="menuitem" tabindex="3" class="left-nav-list__item" data-interior-left-nav-item>
-                <a class="left-nav-list__item-link">
+                <a class="left-nav-list__item-link" href="vm-step-1.html">
                   Certificats
                 </a>
               </li>
@@ -149,19 +161,7 @@ data = JSON.parse(JSON.stringify(data_1));
         <div class="bx--grid" id="main-content">
           
           <div class="bx--row">
-            <div class="bx--col-xs-12 ">
-                <br />
-                <nav class="bx--breadcrumb bx--breadcrumb--no-trailing-slash" aria-label="breadcrumb">
-                    <div class="bx--breadcrumb-item">
-                      <a href="home-vm.html" class="bx--link">Accueil</a>
-                    </div>
-                    <div class="bx--breadcrumb-item">
-                      <a href="vm-step-1.html" class="bx--link">Certificats</a>
-                    </div>
-                    <div class="bx--breadcrumb-item">
-                    </div>
-                </nav>
-                <br>
+            <div class="bx--col-xs-8 ">
                 <h1>Consulter mes certificats CVM, RET & AVP</h1>
                 <br>
                 <br>
@@ -317,7 +317,7 @@ data = JSON.parse(JSON.stringify(data_1));
                             <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-3">Annulé (5)</button>
                             <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-4">Conformé (20)</button>
                         </div>
-                      <form method="get" action="vm-step-2.html"><button class="bx--btn bx--btn--sm bx--btn--primary" type="submit">Créer un rapport</button></form>
+                      <form method="get" action="vm-step-2.html"><button class="bx--btn bx--btn--sm bx--btn--primary" type="submit">Créer</button></form>
                     </div>
                 
                   </section>
