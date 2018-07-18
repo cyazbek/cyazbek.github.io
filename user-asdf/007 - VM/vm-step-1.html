@@ -547,7 +547,7 @@ data = JSON.parse(JSON.stringify(data_1));
         var pageIndex = current_page_nb-1
         
         for (var i = 0; i < sortedDataSet[pageIndex].length; i++) { 
-          table_data_html += ("<tr><td>"+sortedDataSet[pageIndex][i].vehicule+"</td><td>"+sortedDataSet[pageIndex][i].date_creation+"</td><td>"+sortedDataSet[pageIndex][i].num_id+"</td><td>"+sortedDataSet[pageIndex][i].type_doc+"</td><td>"+sortedDataSet[pageIndex][i].statut+"</td><td>"+sortedDataSet[pageIndex][i].type_vehicule+"</td><td>"+sortedDataSet[pageIndex][i].employe+"</td><td><a href=\"#\">"+sortedDataSet[pageIndex][i].action+"</a></td></tr>");
+          table_data_html += ("<tr><td>"+sortedDataSet[pageIndex][i].vehicule+"</td><td>"+sortedDataSet[pageIndex][i].date_creation+"</td><td>"+sortedDataSet[pageIndex][i].num_id+"</td><td>"+sortedDataSet[pageIndex][i].type_doc+"</td><td>"+sortedDataSet[pageIndex][i].statut+"</td><td>"+sortedDataSet[pageIndex][i].type_vehicule+"</td><td>"+sortedDataSet[pageIndex][i].employe+"</td><td><a href=\"vm-consulter.html\">"+sortedDataSet[pageIndex][i].action+"</a></td></tr>");
         }
 
         data_table_body.innerHTML = table_data_html;
