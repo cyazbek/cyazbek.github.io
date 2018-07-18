@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>SAAQClic - Certificats</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="../css-js/saaq-components.css">
+  <script src="../css-js/user-testing-func.js"></script>
+  <!-- <script type="text/javascript" src="../data/enregistre-data.json"></script> -->
+
+  <script>
+  var data_1 = [
+		{num_id:"8000000007",type_doc:"AVP",statut:"À conformer",vehicule:"<strong>INTL L94 2001</strong><br><span class=\"niv\">#01234567890123456</span>",date_creation:"2018-07-17",type_vehicule:"Camion",employe:"Paul Martin",action:"Consulter"},
+		{num_id:"8000000006",type_doc:"AVP",statut:"À conformer",vehicule:"<strong>Acura TL 2014</strong><br><span class=\"niv\">#01234567555555555</span>",date_creation:"2018-07-14",type_vehicule:"Promenade",employe:"Karl Oulet",action:"Consulter"},
+		{num_id:"8000000005",type_doc:"AVP",statut:"Conformé",vehicule:"<strong>Nissan Versa 2007</strong><br><span class=\"niv\">#12334424534649468</span>",date_creation:"2018-07-01",type_vehicule:"Promenade",employe:"Paul Martin",action:"Consulter"},
+		{num_id:"8000000004",type_doc:"AVP",statut:"Conformé",vehicule:"<strong>GMC CSERI 2000</strong><br><span class=\"niv\">#12393334477777682</span>",date_creation:"2018-06-28",type_vehicule:"Camion",employe:"Paul Martin",action:"Consulter"},
+		{num_id:"8000000003",type_doc:"AVP",statut:"Conformé",vehicule:"<strong>Volkvagen Golf 2004</strong><br><span class=\"niv\">#12393332334466468</span>",date_creation:"2018-06-22",type_vehicule:"Promenade",employe:"Karl Oulet",action:"Consulter"},
+		{num_id:"8000000002",type_doc:"AVP",statut:"Conformé",vehicule:"<strong>GMC SIE 2003</strong><br><span class=\"niv\">#0123456789878790</span>",date_creation:"2018-05-12",type_vehicule:"Camion",employe:"Karl Oulet",action:"Consulter"},
+		{num_id:"8000000001",type_doc:"AVP",statut:"Conformé",vehicule:"<strong>Toyota Corolla 1998</strong><br><span class=\"niv\">#0123456789076767</span>",date_creation:"2018-05-08",type_vehicule:"Promenade",employe:"Réjeanne Tremblay",action:"Consulter"},
+		{num_id:"3110000018",type_doc:"CVM",statut:"Créé",vehicule:"<strong>Ford Escape 2006</strong><br><span class=\"niv\">#01234567551133221</span>",date_creation:"2018-07-18",type_vehicule:"Promenade",employe:"Paul Martin",action:"Consulter"},
+		{num_id:"3110000017",type_doc:"CVM",statut:"À conformer",vehicule:"<strong>Honda Shadow 2009</strong><br><span class=\"niv\">#01234567551133221</span>",date_creation:"2018-07-18",type_vehicule:"PMotocyclette",employe:"Réjeanne Tremblay",action:"Consulter"},
+		{num_id:"3110000016",type_doc:"CVM",statut:"Annulé",vehicule:"<strong>Mazda CX3 2001 #01234567551144455</span>",date_creation:"2018-07-18",type_vehicule:"Promenade",employe:"Karl Oulet",action:"Consulter"},
+		{num_id:"6222200011",type_doc:"CVM",statut:"Créé",vehicule:"<strong>Yamaha XSR900 2008</strong><br><span class=\"niv\">#01234567599887664</span>",date_creation:"2018-07-18",type_vehicule:"Motocyclette",employe:"Karl Oulet",action:"Consulter"},
+		{num_id:"3110000015",type_doc:"CVM",statut:"Créé",vehicule:"<strong>Mazda 5 2015</strong><br><span class=\"niv\">#01234567551111111</span>",date_creation:"2018-07-13",type_vehicule:"Promenade",employe:"Denis Woo",action:"Consulter"},
+		{num_id:"3110000014",type_doc:"CVM",statut:"Créé",vehicule:"<strong>Freig Cha 2001</strong><br><span class=\"niv\">#01234567555556666</span>",date_creation:"2018-07-11",type_vehicule:"Autobus",employe:"Denis Woo",action:"Consulter"},
+		{num_id:"3110000013",type_doc:"CVM",statut:"Conformé",vehicule:"<strong>Honda civic 2004</strong><br><span class=\"niv\">#01234567555333333</span>",date_creation:"2018-07-10",type_vehicule:"Promenade",employe:"Paul Martin",action:"Consulter"},
+		{num_id:"3110000012",type_doc:"CVM",statut:"À conformer",vehicule:"<strong>Ford Escape 2013</strong><br><span class=\"niv\">#01234567555353564</span>",date_creation:"2018-07-08",type_vehicule:"Promenade",employe:"Denis Woo",action:"Consulter"},
+		{num_id:"3110000001",type_doc:"CVM",statut:"Recréé",vehicule:"<strong>INTL L94 2007</strong><br><span class=\"niv\">#12397069785949468</span>",date_creation:"2018-07-07",type_vehicule:"Camion",employe:"Denis Woo",action:"Consulter"},
+		{num_id:"3110000011",type_doc:"CVM",statut:"Conformé",vehicule:"<strong>Toyota Corolla 2014</strong><br><span class=\"niv\">#12332211222349468</span>",date_creation:"62018-07-06",type_vehicule:"Promenade",employe:"Paul Martin",action:"Consulter"},
+		{num_id:"3110000010",type_doc:"CVM",statut:"Annulé",vehicule:"<strong>Harley Fatboy 1992</strong><br><span class=\"niv\">#12333445566789900</span>",date_creation:"2018-07-05",type_vehicule:"Motocyclette",employe:"Karl Oulet",action:"Consulter"},
+		{num_id:"3000000009",type_doc:"CVM",statut:"Conformé",vehicule:"<strong>Harley Softair 2002</strong><br><span class=\"niv\">#01234567890123459</span>",date_creation:"2018-07-02",type_vehicule:"Motocyclette",employe:"Denis Woo",action:"Consulter"},
+		{num_id:"3110000008",type_doc:"CVM",statut:"Conformé",vehicule:"<strong>Ford C-Max 2018</strong><br><span class=\"niv\">#12397069722211128</span>",date_creation:"2018-07-01",type_vehicule:"Promenade",employe:"Paul Martin",action:"Consulter"},
+		{num_id:"3110000007",type_doc:"CVM",statut:"Conformé",vehicule:"<strong>Freig Cha 2010</strong><br><span class=\"niv\">#12393334455666468</span>",date_creation:"2018-06-30",type_vehicule:"Autobus",employe:"Karl Oulet",action:"Consulter"},
+		{num_id:"3110000006",type_doc:"CVM",statut:"Annulé",vehicule:"<strong>Manac 10448 2005</strong><br><span class=\"niv\">#01234567890123488</span>",date_creation:"2018-06-30",type_vehicule:"Semi-Remorque",employe:"Paul Martin",action:"Consulter"},
+		{num_id:"3110000005",type_doc:"CVM",statut:"Conformé",vehicule:"<strong>Ford Explorer 2018</strong><br><span class=\"niv\">#0123456789034529</span>",date_creation:"2018-06-04",type_vehicule:"Promenade",employe:"Denis Woo",action:"Consulter"},
+		{num_id:"3110000004",type_doc:"CVM",statut:"Conformé",vehicule:"<strong>Ford Flex 2001</strong><br><span class=\"niv\">#0123456789034529</span>",date_creation:"2018-05-03",type_vehicule:"Promenade",employe:"Karl Oulet",action:"Consulter"},
+		{num_id:"3110000003",type_doc:"CVM",statut:"Annulé",vehicule:"<strong>Manac 10333 2004</strong><br><span class=\"niv\">#0123456789011111</span>",date_creation:"2018-05-01",type_vehicule:"Semi-Remorque",employe:"Paul Martin",action:"Consulter"},
+		{num_id:"3110000002",type_doc:"CVM",statut:"Conformé",vehicule:"<strong>Ford focus 2006</strong><br><span class=\"niv\">#0123456789232323</span>",date_creation:"2018-04-04",type_vehicule:"Promenade",employe:"Denis Woo",action:"Consulter"},
+		{num_id:"3110000001",type_doc:"CVM",statut:"Conformé",vehicule:"<strong>Ford F-150 2007</strong><br><span class=\"niv\">#0197684928573848</span>",date_creation:"2018-03-28",type_vehicule:"Promenade",employe:"Réjeanne Tremblay",action:"Consulter"},
+		{num_id:"6222200010",type_doc:"RET",statut:"Créé",vehicule:"<strong>Harley Softair 1990</strong><br><span class=\"niv\">#12345678912345678</span>",date_creation:"2018-07-18",type_vehicule:"Motocyclette",employe:"Denis Woo",action:"Consulter"},
+		{num_id:"6222200009",type_doc:"RET",statut:"À conformer",vehicule:"<strong>Vespa S150 2004</strong><br><span class=\"niv\">#01234567555555555</span>",date_creation:"2018-07-12",type_vehicule:"Cyclomoteur",employe:"Karl Oulet",action:"Consulter"},
+		{num_id:"6222200008",type_doc:"RET",statut:"Conformé",vehicule:"<strong>Toyota RAV4 2009</strong><br><span class=\"niv\">#12397063344455668</span>",date_creation:"2018-07-01",type_vehicule:"Promenade",employe:"Réjeanne Tremblay",action:"Consulter"},
+		{num_id:"6222200007",type_doc:"RET",statut:"Annulé",vehicule:"<strong>GMC CSERI 2002</strong><br><span class=\"niv\">#12393334455666468</span>",date_creation:"2018-06-29",type_vehicule:"Camion",employe:"Denis Woo",action:"Consulter"},
+		{num_id:"6222200006",type_doc:"RET",statut:"Conformé",vehicule:"<strong>Mazda 3 2000</strong><br><span class=\"niv\">#12393334455644468</span>",date_creation:"2018-06-21",type_vehicule:"Promenade",employe:"Denis Woo",action:"Consulter"},
+		{num_id:"6222200005",type_doc:"RET",statut:"Conformé",vehicule:"<strong>Honda CRV 2006</strong><br><span class=\"niv\">#01234567890123989</span>",date_creation:"2018-06-14",type_vehicule:"Promenade",employe:"Réjeanne Tremblay",action:"Consulter"},
+		{num_id:"6222200004",type_doc:"RET",statut:"Conformé",vehicule:"<strong>GMC SIE 2002</strong><br><span class=\"niv\">#01234567890129090</span>",date_creation:"2018-06-05",type_vehicule:"Camion",employe:"Karl Oulet",action:"Consulter"},
+		{num_id:"6222200003",type_doc:"RET",statut:"Conformé",vehicule:"<strong>Toyota Corolla 2000</strong><br><span class=\"niv\">#01234567890128765</span>",date_creation:"2018-06-05",type_vehicule:"Promenade",employe:"Paul Martin",action:"Consulter"},
+		{num_id:"6222200002",type_doc:"RET",statut:"Recréé",vehicule:"<strong>Manac 10448 2001</strong><br><span class=\"niv\">#0123456789076767</span>",date_creation:"2018-04-20",type_vehicule:"Semi-Remorque",employe:"Denis Woo",action:"Consulter"},
+		{num_id:"6222200001",type_doc:"RET",statut:"Conformé",vehicule:"<strong>Vespa S150 2009</strong><br><span class=\"niv\">#0123456789765844</span>",date_creation:"2018-04-30",type_vehicule:"Cyclomoteur",employe:"Karl Oulet",action:"Consulter"},
+        ]
+
+data = JSON.parse(JSON.stringify(data_1));
+
+  </script>
+
+
+  <style>
+      .footer {
+        position: relative;
+        margin-right: 10px;
+        bottom: 10px;
+        width: 100%;
+        border: 1px solid #007676;
+      }
+      .expandable-row { line-height: 125%;}
+      .expandable-row .niv { font-size: 95%; }
+    </style>
+
+</head>
+
+<body>
+  <div class="bx--grid">
+    <div class="bx--row">
+      <div class="bx--col-md-12">
+        <br />
+        <br />
+        <br />
+        <nav class="bx--breadcrumb bx--breadcrumb--no-trailing-slash" aria-label="breadcrumb">
+            <div class="bx--breadcrumb-item">
+              <a href="home-vm.html" class="bx--link">Accueil</a>
+            </div>
+            <div class="bx--breadcrumb-item">
+              <a href="vm-step-1.html" class="bx--link">Certificats</a>
+            </div>
+            <div class="bx--breadcrumb-item">
+            </div>
+        </nav>
+        
+        <nav role="navigation" aria-label="Interior Left Navigation" data-interior-left-nav onclick="toggleSideNav()" class="bx--interior-left-nav bx--interior-left-nav--collapseable">
+          <ul role="menubar" class="left-nav-list" data-interior-left-nav-list aria-label="left nav list" aria-hidden="false">
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link" href="home-vm.html">
+                STH commerce Québec
+              </a>
+            </li>
+
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link" href="empty.html">
+                Rôles &amp; Accès
+              </a>
+            </li>
+
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link" href="empty.html">
+                Factures
+              </a>
+            </li>
+              <li role="menuitem" tabindex="3" class="left-nav-list__item" data-interior-left-nav-item>
+                <a class="left-nav-list__item-link" href="vm-step-1.html">
+                  Certificats
+                </a>
+              </li>
+            </ul>
+            <div class="bx--interior-left-nav-collapse" data-interior-left-nav-collapse>
+              <a class="bx--interior-left-nav-collapse__link" href="#" aria-label="collapse nav pane">
+                <svg class="bx--interior-left-nav-collapse__arrow" width="8" height="12" viewBox="0 0 8 12" fill-rule="evenodd" data-interior-left-nav-arrow>
+                  <title>Collapse nav pane</title>
+                  <path d="M7.5 10.6L2.8 6l4.7-4.6L6.1 0 0 6l6.1 6z"></path>
+                </svg>
+              </a>
+            </div>
+          </nav>
+
+        <div class="bx--grid" id="main-content">
+          
+          <div class="bx--row">
+            <div class="bx--col-xs-8 ">
+                <h1>Consulter mes certificats CVM, RET & AVP</h1>
+                <br>
+                <br>
+                <h4>Consulter les transactions</h4>
+            </div>
+          </div>
+
+          <!-- miniStep 1 - Raison pour remplacement -->
+          <div class="bx--row">
+            <div class="bx--col-xs-12">
+              <br>
+                <div class="bx--data-table-v2-container" data-table-v2>
+                  <!-- <h4 class="bx--data-table-v2-header">Table title</h4> -->
+                  <section class="bx--table-toolbar">
+                    <div class="bx--toolbar-search-container">
+                        <div class="bx--toolbar" data-toolbar>
+                            <div class="bx--search bx--search--sm bx--toolbar-search" role="search" data-search data-toolbar-search>
+                              <label for="search__input" class="bx--label">Search</label>
+                              <input type="search" class="bx--search-input" id="search__input" onkeyup="mySearchFunction()" placeholder="Search">
+                              <button class="bx--toolbar-search__btn" aria-label="Toolbar search">
+                                <svg class="bx--search-magnifier" width="16" height="16" viewBox="0 0 16 16" fill-rule="evenodd">
+                                  <path d="M6 2c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm0-2C2.7 0 0 2.7 0 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zM16 13.8L13.8 16l-3.6-3.6 2.2-2.2z"></path>
+                                  <path d="M16 13.8L13.8 16l-3.6-3.6 2.2-2.2z"></path>
+                                </svg>
+                              </button>
+                              <svg class="bx--search-close bx--search-close--hidden" width="16" height="16" viewBox="0 0 16 16" fill-rule="evenodd">
+                                <path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm3.5 10.1l-1.4 1.4L8 9.4l-2.1 2.1-1.4-1.4L6.6 8 4.5 5.9l1.4-1.4L8 6.6l2.1-2.1 1.4 1.4L9.4 8l2.1 2.1z"></path>
+                              </svg>
+                            </div>
+                            <div data-overflow-menu class="bx--overflow-menu" tabindex="0" aria-label="List of options">
+                              <svg class="bx--overflow-menu__icon bx--toolbar-filter-icon" width="24" height="24" viewBox="0 0 24 24" fill-rule="evenodd">
+                                <path d="M10.9 3c-.4-1.7-2-3-3.9-3S3.6 1.3 3.1 3H0v2h3.1c.4 1.7 2 3 3.9 3s3.4-1.3 3.9-3H24V3H10.9zM7 5c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zM17 8c-1.9 0-3.4 1.3-3.9 3H0v2h13.1c.4 1.7 2 3 3.9 3s3.4-1.3 3.9-3H24v-2h-3.1c-.5-1.7-2-3-3.9-3zm0 5c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zM7 16c-1.9 0-3.4 1.3-3.9 3H0v2h3.1c.4 1.7 2 3 3.9 3s3.4-1.3 3.9-3H24v-2H10.9c-.5-1.7-2-3-3.9-3zm0 5c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"></path>
+                              </svg>
+                              <ul class="bx--overflow-menu-options">
+                                <li class="bx--toolbar-menu__title">Cacher/Montrer</li>
+                                <li class="bx--toolbar-menu__option">
+                                  <input id="filter-option-1" class="bx--checkbox" type="checkbox" value="filter-option-1" name="checkbox">
+                                  <label for="filter-option-1" class="bx--checkbox-label">
+                                    <span class="bx--checkbox-appearance">
+                                      <svg class="bx--checkbox-checkmark" width="12" height="9" viewBox="0 0 12 9" fill-rule="evenodd">
+                                        <path d="M4.1 6.1L1.4 3.4 0 4.9 4.1 9l7.6-7.6L10.3 0z"></path>
+                                      </svg>
+                                    </span>
+                                    Véhicule acquis
+                                  </label>
+                                </li>
+                                <li class="bx--toolbar-menu__option">
+                                  <input id="filter-option-2" class="bx--checkbox" type="checkbox" value="filter-option-2" name="checkbox">
+                                  <label for="filter-option-2" class="bx--checkbox-label">
+                                    <span class="bx--checkbox-appearance">
+                                      <svg class="bx--checkbox-checkmark" width="12" height="9" viewBox="0 0 12 9" fill-rule="evenodd">
+                                        <path d="M4.1 6.1L1.4 3.4 0 4.9 4.1 9l7.6-7.6L10.3 0z"></path>
+                                      </svg>
+                                    </span>
+                                    Véhicule cédé
+                                  </label>
+                                </li>
+                                <li class="bx--toolbar-menu__option">
+                                  <input id="filter-option-2" class="bx--checkbox" type="checkbox" value="filter-option-2" name="checkbox">
+                                  <label for="filter-option-2" class="bx--checkbox-label">
+                                    <span class="bx--checkbox-appearance">
+                                      <svg class="bx--checkbox-checkmark" width="12" height="9" viewBox="0 0 12 9" fill-rule="evenodd">
+                                        <path d="M4.1 6.1L1.4 3.4 0 4.9 4.1 9l7.6-7.6L10.3 0z"></path>
+                                      </svg>
+                                    </span>
+                                    Date
+                                  </label>
+                                </li>
+                                <li class="bx--toolbar-menu__option">
+                                  <input id="filter-option-2" class="bx--checkbox" type="checkbox" value="filter-option-2" name="checkbox">
+                                  <label for="filter-option-2" class="bx--checkbox-label">
+                                    <span class="bx--checkbox-appearance">
+                                      <svg class="bx--checkbox-checkmark" width="12" height="9" viewBox="0 0 12 9" fill-rule="evenodd">
+                                        <path d="M4.1 6.1L1.4 3.4 0 4.9 4.1 9l7.6-7.6L10.3 0z"></path>
+                                      </svg>
+                                    </span>
+                                    Date de livraison
+                                  </label>
+                                </li>
+                                <li class="bx--toolbar-menu__option">
+                                  <input id="filter-option-2" class="bx--checkbox" type="checkbox" value="filter-option-2" name="checkbox">
+                                  <label for="filter-option-2" class="bx--checkbox-label">
+                                    <span class="bx--checkbox-appearance">
+                                      <svg class="bx--checkbox-checkmark" width="12" height="9" viewBox="0 0 12 9" fill-rule="evenodd">
+                                        <path d="M4.1 6.1L1.4 3.4 0 4.9 4.1 9l7.6-7.6L10.3 0z"></path>
+                                      </svg>
+                                    </span>
+                                    Statut
+                                  </label>
+                                </li>
+                                <li class="bx--toolbar-menu__option">
+                                  <input id="filter-option-2" class="bx--checkbox" type="checkbox" value="filter-option-2" name="checkbox">
+                                  <label for="filter-option-2" class="bx--checkbox-label">
+                                    <span class="bx--checkbox-appearance">
+                                      <svg class="bx--checkbox-checkmark" width="12" height="9" viewBox="0 0 12 9" fill-rule="evenodd">
+                                        <path d="M4.1 6.1L1.4 3.4 0 4.9 4.1 9l7.6-7.6L10.3 0z"></path>
+                                      </svg>
+                                    </span>
+                                    Type
+                                  </label>
+                                </li>
+                                <li class="bx--toolbar-menu__option">
+                                  <input id="filter-option-3" class="bx--checkbox" type="checkbox" value="filter-option-3" name="checkbox">
+                                  <label for="filter-option-3" class="bx--checkbox-label">
+                                    <span class="bx--checkbox-appearance">
+                                      <svg class="bx--checkbox-checkmark" width="12" height="9" viewBox="0 0 12 9" fill-rule="evenodd">
+                                        <path d="M4.1 6.1L1.4 3.4 0 4.9 4.1 9l7.6-7.6L10.3 0z"></path>
+                                      </svg>
+                                    </span>
+                                    Employé
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                            <div data-overflow-menu class="bx--overflow-menu" tabindex="0" aria-label="List of options">
+                              <svg class="bx--overflow-menu__icon" width="4" height="20" viewBox="0 0 4 20" fill-rule="evenodd">
+                                <circle cx="2" cy="2" r="2"></circle>
+                                <circle cx="2" cy="10" r="2"></circle>
+                                <circle cx="2" cy="18" r="2"></circle>
+                              </svg>
+                              <ul class="bx--overflow-menu-options">
+                                <li class="bx--overflow-menu-options__option">
+                                  <button type="button" class="bx--overflow-menu-options__btn">Refresh table</button>
+                                </li>
+                                <hr class="bx--toolbar-menu__divider" />
+                                <li class="bx--toolbar-menu__title">ROW HEIGHT</li>
+                                <fieldset data-row-height class="bx--radio-button-group">
+                                  <legend class="bx--visually-hidden">Select table row height</legend>
+                                  <li class="bx--toolbar-menu__option">
+                                    <input id="short-rows" class="bx--radio-button" type="radio" value="short" name="radio" checked>
+                                    <label for="short-rows" class="bx--radio-button__label">
+                                      <span class="bx--radio-button__appearance"></span>
+                                      Short
+                                    </label>
+                                  </li>
+                                  <li class="bx--toolbar-menu__option">
+                                    <input id="tall-rows" class="bx--radio-button" type="radio" value="tall" name="radio">
+                                    <label for="tall-rows" class="bx--radio-button__label">
+                                      <span class="bx--radio-button__appearance"></span>
+                                      Tall
+                                    </label>
+                                  </li>
+                                </fieldset>
+                              </ul>
+                            </div>
+                          </div>
+                    </div>
+                
+                    <div class="bx--toolbar-content">
+                        <div data-content-switcher class="bx--content-switcher" style="margin-right:1em;">
+                            <button class="bx--content-switcher-btn bx--btn--sm bx--content-switcher--selected" data-target=".demo--panel--opt-1">Tous (37)</button>
+                            <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-2">À conformer (5)</button>
+                            <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-3">Annulé (5)</button>
+                            <button class="bx--content-switcher-btn bx--btn--sm" data-target=".demo--panel--opt-4">Conformé (20)</button>
+                        </div>
+                      <form method="get" action="vm-step-2.html"><button class="bx--btn bx--btn--sm bx--btn--primary" type="submit">Créer</button></form>
+                    </div>
+                
+                  </section>
+                  <table class="bx--data-table-v2" id="vm_historic_table">
+                    <thead>
+                      <tr>
+                        <th>
+                          <button class="bx--table-sort-v2" data-event="sort">
+                            <span class="bx--table-header-label">Véhicule</span>
+                            <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                              <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </th>
+                        <th>
+                          <button class="bx--table-sort-v2" data-event="sort">
+                            <span>Date de création</span>
+                            <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                              <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </th>
+                        <th>
+                          <button class="bx--table-sort-v2" data-event="sort">
+                            <span>Numéro d’identification</span>
+                            <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                              <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </th>
+                        <th>
+                          <button class="bx--table-sort-v2" data-event="sort">
+                            <span>Type de document</span>
+                            <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                              <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </th>
+                        <th>
+                            <button class="bx--table-sort-v2" data-event="sort">
+                              <span>Statut</span>
+                              <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                              </svg>
+                            </button>
+                        </th>
+                        <th>
+                        <button class="bx--table-sort-v2" data-event="sort">
+                        <span>Type de véhicule</span>
+                        <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                          <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                        </svg>
+                        </button>
+                        </th>
+                        <th>
+                        <button class="bx--table-sort-v2" data-event="sort">
+                          <span>Nom de l’employé</span>
+                          <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                            <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                          </svg>
+                        </button>
+                        </th>
+                        <th>
+                          <button class="bx--table-sort-v2" data-event="sort">
+                            <span>Action</span>
+                            <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                              <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody data-table-body>
+                    
+                    
+                    </tbody>
+                  </table>
+                </div>
+                <div class="bx--pagination" data-pagination>
+                  <div class="bx--pagination__left">
+                    <span class="bx--pagination__text">Items per page:</span>
+                    <div class="bx--select bx--select--inline">
+                      <label for="select-id-pagination" class="bx--visually-hidden">Number of items per page</label>
+                      <select id="select-id-pagination" class="bx--select-input" onchange="populateTableData()" data-items-per-page>
+                        <option class="bx--select-option" value="10" selected>10</option>
+                        <option class="bx--select-option" value="20">20</option>
+                        <option class="bx--select-option" value="30">30</option>
+                        <option class="bx--select-option" value="40">40</option>
+                        <option class="bx--select-option" value="50">50</option>
+                      </select>
+                      <svg class="bx--select__arrow" width="10" height="5" viewBox="0 0 10 5">
+                        <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                      </svg>
+                    </div>
+                    <!-- <span class="bx--pagination__text">
+                      <span>|&nbsp;</span>
+                      <span data-displayed-item-range>1-10</span> of
+                      <span data-total-items>37</span> items</span> -->
+                  </div>
+                  <div class="bx--pagination__right bx--pagination--inline">
+                    <span class="bx--pagination__text">
+                      <span data-displayed-page-number>1</span> of
+                      <span data-total-pages>2</span> pages</span>
+                    <button class="bx--pagination__button bx--pagination__button--backward" data-page-backward aria-label="Backward button">
+                      <svg class="bx--pagination__button-icon" width="7" height="12" viewBox="0 0 7 12">
+                        <path fill-rule="nonzero" d="M1.45 6.002L7 11.27l-.685.726L0 6.003 6.315 0 7 .726z" />
+                      </svg>
+                    </button>
+                    <label for="page-number-input" class="bx--visually-hidden">Page number input</label>
+                    <div class="bx--select bx--select--inline">
+                      <label for="select-id-pagination" class="bx--visually-hidden">Number of items per page</label>
+                      <select id="select-id-pagination" class="bx--select-input"  onchange="populateTableData()" data-page-number-input>
+                        <option class="bx--select-option" value="1" selected>1</option>
+                        <option class="bx--select-option" value="2">2</option> 
+                      </select>
+                      <svg class="bx--select__arrow" width="10" height="5" viewBox="0 0 10 5">
+                        <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                      </svg>
+                    </div>
+                    <button class="bx--pagination__button bx--pagination__button--forward" data-page-forward aria-label="Forward button">
+                      <svg class="bx--pagination__button-icon" width="7" height="12" viewBox="0 0 7 12">
+                        <path fill-rule="nonzero" d="M5.569 5.994L0 .726.687 0l6.336 5.994-6.335 6.002L0 11.27z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>                
+                <br>         
+                <br>
+                
+            </div>
+          </div>
+
+        </div>
+        <!-- End of div .bx--grid-->
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="scripts/libs/bootstrap/bootstrap.js"></script>
+  <script src="../css-js/saaq-components.js"></script>
+  <script>
+
+  </script>
+  <script>
+      var openSideNav = false;
+      toggleSideNav();
+  
+      function toggleSideNav() {
+        //document.getElementById("mySidenav").style.width = "250px";
+        if (openSideNav == true) {
+          document.getElementById("main-content").style.marginLeft = "5%";
+          openSideNav = false;
+          console.log("NAV CLOSED");
+        } else {
+          document.getElementById("main-content").style.marginLeft = "17%";
+          openSideNav = true;
+          console.log("NAV OPENED");
+        }
+      }
+  
+    </script>
+
+
+
+<script>
+    function mySearchFunction() {
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("search__input");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("vm_historic_table");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if ((td.innerHTML.toUpperCase().indexOf(filter) > -1)) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
+
+<!-- IMPORTANT -->
+    <script>
+    var data_items_per_page,data_page_number_input, current_page_nb, total_item_count, range;
+
+      var sortedDataSet;
+
+      // Dividing the tables into page representation of the tables for display
+      function prepDataSetPerPage(range_limit) {
+        sortedDataSet = [];
+        var index = 0;
+        for (let i = 0; i < num_of_pages; i++) {
+          var tempArray = [];          
+          for (let j = 0; j < range_limit; j++) {
+            tempArray.push(data_1[index]);
+            index++;
+            if (index >= total_item_count ){
+              break;
+            }
+          }
+          sortedDataSet.push(tempArray); 
+        }
+        console.log(sortedDataSet);
+      }
+      
+
+      function populateTableData() {
+
+        getUpdatedValues();
+        prepDataSetPerPage (range);
+        readPopulateTable(data_1);
+        
+
+        
+      }
+
+      function readPopulateTable(data_table) {
+        var data_table_body = document.querySelector('[data-table-body]');
+        var table_data_html = "";
+        
+        var pageIndex = current_page_nb-1
+        
+        for (var i = 0; i < sortedDataSet[pageIndex].length; i++) { 
+          table_data_html += ("<tr><td>"+sortedDataSet[pageIndex][i].vehicule+"</td><td>"+sortedDataSet[pageIndex][i].date_creation+"</td><td>"+sortedDataSet[pageIndex][i].num_id+"</td><td>"+sortedDataSet[pageIndex][i].type_doc+"</td><td>"+sortedDataSet[pageIndex][i].statut+"</td><td>"+sortedDataSet[pageIndex][i].type_vehicule+"</td><td>"+sortedDataSet[pageIndex][i].employe+"</td><td><a href=\"#\">"+sortedDataSet[pageIndex][i].action+"</a></td></tr>");
+        }
+
+        data_table_body.innerHTML = table_data_html;
+        
+      }
+
+      function getUpdatedValues() {
+        data_items_per_page = document.querySelector('[data-items-per-page]');
+        range = data_items_per_page.options[data_items_per_page.selectedIndex].value;
+        console.log(range);
+
+        data_page_number_input = document.querySelector('[data-page-number-input]');
+        current_page_nb = data_page_number_input.options[data_page_number_input.selectedIndex].value;
+
+        total_item_count = data_1.length;
+        num_of_pages = Math.ceil(total_item_count / range);
+
+        // ----- Right
+        var total_page_count_label = document.querySelector('[data-total-pages]');
+        total_page_count_label.innerHTML = num_of_pages;
+
+        var page_number_input_html="";
+          for (let index = 1; index <= num_of_pages; index++) {
+            page_number_input_html += "<option class=\"bx--select-option\" value=\""+index+"\">"+index+"</option>"
+          }
+          data_page_number_input.innerHTML = page_number_input_html;
+
+      }
+
+      populateTableData();
+
+    </script>
+
+    <script>
+      var data_set_size = data_1.length;
+      var page_count_total;      
+      function getTotalPageCount(table_item_count, items_per_page) {
+
+        var num_of_pages = Math.ceil(table_item_count / items_per_page);
+        
+        var total_page_count_label = document.querySelector('[data-total-pages]');
+        total_page_count_label.innerHTML = num_of_pages;
+
+         var data_page_number_input = document.querySelector('[data-page-number-input]');
+          var current_page = data_page_number_input.options[data_page_number_input.selectedIndex].value;
+         
+        var page_number_input_html="";
+          for (let index = 1; index <= num_of_pages; index++) {
+            page_number_input_html += "<option class=\"bx--select-option\" value=\""+index+"\">"+index+"</option>"
+          }
+          data_page_number_input.innerHTML = page_number_input_html;
+         
+         updateDataTotalItem(table_item_count);
+         updateDataDisplayedItemRange(20, 40, items_per_page);
+      }
+
+      function updateTableData() {
+        var data_page_number_input = document.querySelector('[data-page-number-input]');
+          var current_page = data_page_number_input.options[data_page_number_input.selectedIndex].value;
+
+          var data_items_per_page = document.querySelector('[data-items-per-page]');
+        var range = data_items_per_page.options[data_items_per_page.selectedIndex].value;
+
+        var data_displayed_page_number = document.querySelector('[data-displayed-page-number]');
+        data_displayed_page_number.innerHTML = current_page;
+        
+
+          //updateDataTablePageChange(current_page, range);
+        
+      }
+
+
+      function updateDataTablePageChange(pageNumber, range) {
+        
+        var data_table_body = document.querySelector('[data-table-body]');
+        var table_data_html = "";
+        var start = (((pageNumber-1)*range)+1);
+        var end = (pageNumber*range);
+        if (end >data_1.length){
+          end = data_1.length
+        }
+        for (var i = start; i < end; i++) { 
+          table_data_html += ("<tr><td>"+data_1[i].vehicule+"</td><td>"+data_1[i].date_creation+"</td><td>"+data_1[i].num_id+"</td><td>"+data_1[i].type_doc+"</td><td>"+data_1[i].statut+"</td><td>"+data_1[i].type_vehicule+"</td><td>"+data_1[i].employe+"</td><td><a href=\"#\">"+data_1[i].action+"</a></td></tr>");
+        }
+
+        data_table_body.innerHTML = table_data_html;
+        
+      }
+
+      function updateDataTotalItem(param) {
+        //var data_total_items = document.querySelector('[data-total-items]');
+        //data_total_items.innerHTML = param;
+      }
+      function updateDataDisplayedItemRange(rangeStrart, rangeEnd,itemsPerPage) {
+        
+        // var data_items_per_page = document.querySelector('[data-items-per-page]');
+        // var range = data_items_per_page.options[data_items_per_page.selectedIndex].value;
+
+        // var data_page_number_input = document.querySelector('[data-page-number-input]');
+        // var current_page = data_page_number_input.options[data_page_number_input.selectedIndex].value;
+        // var data_displayed_item_range = document.querySelector('[data-displayed-item-range]');
+
+        // data_displayed_item_range.innerHTML =(((current_page-1)*range)+1)+"-"+(current_page*range);
+
+      }
+
+      getTotalPageCount(data_1.length, 10.0);
+    </script>
+
+<!-- SORT TABLE -->
+    <script>
+      var table = document.querySelector('[data-table-v2]');
+var tableContainer = document.querySelector('.bx--responsive-table-container');
+var columns = document.querySelectorAll('[data-event=sort]');
+
+function sortTable(table, col, direction) {
+  // Get Table Ref for Refreshing Rows 
+  var tableRef = CarbonComponents.DataTable.components.get(tableContainer);
+  // Get Table Body
+  var tb = table.querySelector('tbody');
+  var tr = Array.from(tb.querySelectorAll('tr'));
+  // Sort Rows
+  tr = tr.sort(function (a, b) {
+    var one = a.cells[col].textContent.trim();
+    var two = b.cells[col].textContent.trim();
+    if (direction === undefined || direction === 'descending') {
+      return one > two;
+    } else {
+      return two > one;
+    }
+  });
+  // Reappend rows
+  tr.forEach(function (item) {
+    tb.appendChild(item);
+  });
+  // Refresh stripes
+  tableRef.refreshRows();
+}
+
+function clearIcons(i) {
+  Array.from(columns).forEach(function (column, key) {
+    if (!(i === key)) {
+      delete column.dataset.active;
+    }
+  });
+}
+
+var prevNode = 0;
+Array.from(columns).forEach(function (column, key) {
+  column.addEventListener('click', function (evt) {
+    if (!(key === prevNode)) {
+      clearIcons(key);
+      column.dataset.active = true;
+      prevNode = key;
+    }
+
+    var direction = column.dataset.previousValue;
+    sortTable(table, key, direction);
+  });
+});
+    
+    </script>
+
+</body>
+
+</html>
