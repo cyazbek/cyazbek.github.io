@@ -560,6 +560,26 @@ data = JSON.parse(JSON.stringify(data_1));
 
     </script>
 
+<script>
+    function mySearchFunction() {
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("search__input");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("immat_historic_table");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if ((td.innerHTML.toUpperCase().indexOf(filter) > -1)) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
+
 <!-- <script>
     function mySearchFunction() {
       var input, filter, table, tr, td, td_list;
@@ -570,9 +590,11 @@ data = JSON.parse(JSON.stringify(data_1));
       for (i = 0; i < tr.length; i++) {
         if (td){
           for (j = 0; j < td.length; j++){
-            td_list = tr[i].getElementsByTagName("td")[j];
+
+        }
         }
         
+        td = tr[i].getElementsByTagName("td")[0];
         if (td) {
           if ((td.innerHTML.toUpperCase().indexOf(filter) > -1)) {
             tr[i].style.display = "";
