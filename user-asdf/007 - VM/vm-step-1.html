@@ -630,7 +630,7 @@ data = JSON.parse(JSON.stringify(data_1));
           end = data_1.length
         }
         for (var i = start; i < end; i++) { 
-          table_data_html += ("<tr><td>"+data_1[i].vehicule+"</td><td>"+data_1[i].date_creation+"</td><td>"+data_1[i].num_id+"</td><td>"+data_1[i].type_doc+"</td><td>"+data_1[i].statut+"</td><td>"+data_1[i].type_vehicule+"</td><td>"+data_1[i].employe+"</td><td><a href=\"#\">"+data_1[i].action+"</a></td></tr>");
+          table_data_html += ("<tr><td>"+data_1[i].vehicule+"</td><td>"+data_1[i].date_creation+"</td><td>"+data_1[i].num_id+"</td><td>"+data_1[i].type_doc+"</td><td>"+data_1[i].statut+"</td><td>"+data_1[i].type_vehicule+"</td><td>"+data_1[i].employe+"</td><td><a href=\"vm-step-1.html\">"+data_1[i].action+"</a></td></tr>");
         }
 
         data_table_body.innerHTML = table_data_html;
