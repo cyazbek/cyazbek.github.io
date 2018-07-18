@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>SAAQClic - Enregistrer un véhicule</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="../css-js/saaq-components.css">
+
+  <style>
+      .footer {
+        position: relative;
+        margin-right: 10px;
+        bottom: 10px;
+        width: 100%;
+        border: 1px solid #007676;
+      }
+      .expandable-row { line-height: 125%;}
+      .expandable-row .niv { font-size: 95%; }
+    </style>
+
+</head>
+
+<body>
+  <div class="bx--grid">
+    <div class="bx--row">
+          
+          <style>
+            .header {
+            position: fixed;
+            top: 0px;
+            margin-right: 10px;
+           
+            width: 85%;
+            border: 1px solid #007676;
+            background-color: #ffffff; 
+          }
+          </style>
+          <div class="bx--col-xs-12">
+              <div class="header">
+                  <div style="float: left;">
+                    <p style="margin-left:1em;margin-top:1em;"> SAAQ</p>
+                  </div>
+                  <div style="text-align: right; color: #ffffff;">
+                    <span style="margin-right: 4px; margin-bottom: 4px;"></span>
+                    <button class="bx--btn bx--btn--primary" onclick="window.location.href='enregistre-vehicule-step-4.html'" style="margin:8px;"
+                      type="button">
+                      Boite aux lettres
+                      <svg width="16" height="11" viewBox="0 0 16 11"><path d="M2.028 1l5.977 4.38L13.974 1H2.028zM15 1.487L8.3 6.403a.5.5 0 0 1-.59 0L1 1.486V10h14V1.487zM1 0h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1z"></path></svg></button>
+                      <button class="bx--btn bx--btn--primary" onclick="window.location.href='enregistre-vehicule-step-4.html'" style="margin:8px;"
+                      type="button">Notification
+                      <svg width="14" height="16" viewBox="0 0 14 16"><path d="M11.199 9.9a.5.5 0 0 1-.2-.4V6.23a4 4 0 0 0-3.99-4A3.989 3.989 0 0 0 3.01 6.206L3 9.52a.5.5 0 0 1-.202.4L1 11.252V13h12v-1.75L11.199 9.9zM4.55 14H.5a.5.5 0 0 1-.5-.5V11a.5.5 0 0 1 .202-.402l1.799-1.333.01-3.062A4.99 4.99 0 0 1 6.5 1.254V0h1v1.254a5 5 0 0 1 4.498 4.975v3.02L13.8 10.6a.5.5 0 0 1 .2.4v2.5a.5.5 0 0 1-.5.5H9.45a2.5 2.5 0 0 1-4.9 0zm1.035 0a1.5 1.5 0 0 0 2.83 0h-2.83z"></path></svg>
+                    </button>
+    
+                  </div>
+                </div>
+                <br><br><br>
+          </div>
+      <div class="bx--col-md-12">
+        <br />
+        <br />
+        <br />
+
+        
+        <!-- <nav class="bx--breadcrumb bx--breadcrumb--no-trailing-slash" aria-label="breadcrumb">
+            <div class="bx--breadcrumb-item">
+              <a href="../home-commercant.html" class="bx--link">Accueil</a>
+            </div>
+            <div class="bx--breadcrumb-item">
+              <a href="../enregistrer/enregistre-vehicule-step-0.html" class="bx--link">Enregistrer</a>
+            </div>
+            <div class="bx--breadcrumb-item">
+              <a href="../enregistrer/enregistre-vehicule-step-1.html" class="bx--link">Nouvel enregistrement</a>
+            </div>
+            <div class="bx--breadcrumb-item">
+            </div>
+        </nav> -->
+
+        <nav role="navigation" aria-label="Interior Left Navigation" data-interior-left-nav onclick="toggleSideNav()" class="bx--interior-left-nav bx--interior-left-nav--collapseable">
+          <ul role="menubar" class="left-nav-list" data-interior-left-nav-list aria-label="left nav list" aria-hidden="false">
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link" href="../home-commercant.html">
+                STH commerce québec
+              </a>
+            </li>
+
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link" href="../commercant-empty.html">
+                Rôles &amp; Accès
+              </a>
+            </li>
+
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link" href="../commercant-empty.html">
+                Factures
+              </a>
+            </li>
+
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link" href="../commercant-empty.html">
+                Prélèvement automatisés
+              </a>
+            </li>
+
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link" href="../commercant-empty.html">
+                Coordonnées bancaires
+              </a>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link" href="../enregistrer/enregistre-vehicule-step-0.html">
+                Enregistrer un véhicule
+              </a>
+            </li>
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link" href="../immatriculer/immatricule-step-1.html">
+                Immatriculer un véhicule
+              </a>
+            </li>
+            <li role="menuitem" tabindex="3" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link" href="../commercant-empty.html">
+                Plaques personnalisé
+              </a>
+            </li>
+            <li role="menuitem" tabindex="3" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link" href="../commercant-empty.html">
+                Déconnexion
+              </a>
+            </li>
+          </ul>
+          <div class="bx--interior-left-nav-collapse" data-interior-left-nav-collapse>
+            <a class="bx--interior-left-nav-collapse__link" href="#" aria-label="collapse nav pane">
+              <svg class="bx--interior-left-nav-collapse__arrow" width="8" height="12" viewBox="0 0 8 12" fill-rule="evenodd" data-interior-left-nav-arrow>
+                <title>Collapse nav pane</title>
+                <path d="M7.5 10.6L2.8 6l4.7-4.6L6.1 0 0 6l6.1 6z"></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+
+        <div class="bx--grid" id="main-content">
+          
+          <div class="bx--row">
+            <div class="bx--col-xs-12 ">
+                <nav class="bx--breadcrumb bx--breadcrumb--no-trailing-slash" aria-label="breadcrumb">
+                    <div class="bx--breadcrumb-item">
+                      <a href="../home-commercant.html" class="bx--link">Accueil</a>
+                    </div>
+                    <div class="bx--breadcrumb-item">
+                      <a href="../enregistrer/enregistre-vehicule-step-0.html" class="bx--link">Enregistrer</a>
+                    </div>
+                    <div class="bx--breadcrumb-item">
+                      <a href="../enregistrer/enregistre-vehicule-step-1.html" class="bx--link">Nouvel enregistrement</a>
+                    </div>
+                    <div class="bx--breadcrumb-item">
+                    </div>
+                </nav>
+
+                <br>
+              <h1>Enregistrer</h1>
+              <br>
+              <br>
+              <h3>Enregistrer un véhicule usagé acquis d’un client</h3>
+              <br>
+              <br>
+            </div>
+          </div>
+          <div class="bx--row">
+            <div class="bx--col-xs-12">
+              <ul data-progress data-progress-current class="bx--progress">
+                <li class="bx--progress-step bx--progress-step--current">
+                  <svg>
+                    <circle cx="12" cy="12" r="12"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                  </svg>
+                  <p class="bx--progress-label">Véhicule</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--incomplete">
+                  <svg>
+                    <circle cx="12" cy="12" r="12"></circle>
+                  </svg>
+                  <p class="bx--progress-label">Client</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--incomplete">
+                  <svg>
+                    <circle cx="12" cy="12" r="12"></circle>
+                  </svg>
+                  <p class="bx--progress-label">Détails</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--incomplete">
+                  <svg>
+                    <circle cx="12" cy="12" r="12"></circle>
+                  </svg>
+                  <p class="bx--progress-label">Coûts</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--incomplete">
+                  <svg>
+                    <circle cx="12" cy="12" r="12"></circle>
+                  </svg>
+                  <p class="bx--progress-label">Résumé</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+                <li class="bx--progress-step bx--progress-step--incomplete">
+                  <svg>
+                    <circle cx="12" cy="12" r="12"></circle>
+                  </svg>
+                  <p class="bx--progress-label">Confirmation</p>
+                  <span class="bx--progress-line"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="bx--row">
+            <div class="bx--col-sm-12">
+              <br>
+              <br>
+
+              <div class="bx--form-item">
+                <label for="text-input-1" class="bx--label">Numéro d’identification de véhicule (NIV)</label>
+                <input id="text-input-1" type="text" class="bx--text-input" placeholder="Inscrire le numéro d’identification du véhicule">
+              </div>
+
+              <div class="bx--form-item">
+                <label for="text-input-2" class="bx--label">Numéro du certiificat</label>
+                <input id="text-input-2" type="text" class="bx--text-input" placeholder="Inscrire le numéro du certificat">
+              </div>
+
+              <div class="bx--form-item">
+                <div data-date-picker data-date-picker-type="single" class="bx--date-picker bx--date-picker--single">
+                  <div class="bx--date-picker-container">
+                    <label for="date-picker-1" class="bx--label">Date de la transaction inscrite sur le certificat d’immatriculation</label>
+                    <svg data-date-picker-icon class="bx--date-picker__icon" width="17" height="19" viewBox="0 0 17 19">
+                      <path d="M12 0h2v2.7h-2zM3 0h2v2.7H3z" />
+                      <path d="M0 2v17h17V2H0zm15 15H2V7h13v10z" />
+                      <path d="M9.9 15H8.6v-3.9H7.1v-.9c.9 0 1.7-.3 1.8-1.2h1v6z" />
+                    </svg>
+                    <input type="text" id="date-picker-3" class="bx--date-picker__input" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="mm/dd/yyyy"
+                      data-date-picker-input />
+                    <div class="bx--form-requirement">
+                      Invalid date format.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bx--form-item">
+                <label for="text-input-1" class="bx--label">Le numéro de subdivision si requis</label>
+                <input id="text-input-1" type="text" class="bx--text-input" placeholder="Inscrire le numéro de subdivision">
+              </div>
+        
+              <br>
+              <br>
+
+
+            </div>
+          </div>
+
+          <div class="bx--row">
+            <div class="bx--col-xs-12">
+              <div class="footer">
+                <div style="float: left;">
+                  <p style="margin-left:1em;margin-top:1em;"> Aide?
+                    <strong>Réponse.
+                      <a href="#" class="bx--link">Lien</a>
+                    </strong>
+                  </p>
+                </div>
+                <div style="text-align: right">
+                  <a href="enregistre-vehicule-step-1.html" class="bx--link">Étape précèdente</a>
+                  <span style="margin-right: 4px; margin-bottom: 4px;"></span>
+                  <button class="bx--btn bx--btn--primary" onclick="window.location.href='enregistre-vehicule-step-2.html'" style="margin:8px;"
+                    type="button">Prochaine étape</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- End of div .bx--grid-->
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="scripts/libs/bootstrap/bootstrap.js"></script>
+  <script src="../css-js/saaq-components.js"></script>
+  <script>
+    var openSideNav = false;
+    toggleSideNav();
+
+    function toggleSideNav() {
+      //document.getElementById("mySidenav").style.width = "250px";
+      if (openSideNav == true) {
+        document.getElementById("main-content").style.marginLeft = "5%";
+        openSideNav = false;
+        console.log("NAV CLOSED");
+      } else {
+        document.getElementById("main-content").style.marginLeft = "17%";
+        openSideNav = true;
+        console.log("NAV OPENED");
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

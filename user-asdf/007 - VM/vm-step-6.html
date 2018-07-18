@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>0000 - VM</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="../css-js/saaq-components.css">
+
+  <style>
+    .footer {
+      position: relative;
+      margin-left: 10px;
+      margin-right: 10px;
+      bottom: 0;
+      width: 100%;
+      border-style: solid solid solid solid;
+      border-width: 1px;
+      border-color: #007676;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="bx--grid">
+    <div class="bx--row">        
+      <style>
+        .header {
+        position: fixed;
+        top: 0px;
+        margin-right: 10px;
+       
+        width: 85%;
+        border: 1px solid #007676;
+        background-color: #ffffff; 
+      }
+      </style>
+      <div class="bx--col-xs-12">
+          <div class="header">
+              <div style="float: left;">
+                <p style="margin-left:1em;margin-top:1em;"> SAAQ</p>
+              </div>
+              <div style="text-align: right; color: #ffffff;">
+                <span style="margin-right: 4px; margin-bottom: 4px;"></span>
+                <button class="bx--btn bx--btn--primary" onclick="window.location.href='enregistre-vehicule-step-4.html'" style="margin:8px;"
+                  type="button">
+                  Boite aux lettres
+                  <svg width="16" height="11" viewBox="0 0 16 11"><path d="M2.028 1l5.977 4.38L13.974 1H2.028zM15 1.487L8.3 6.403a.5.5 0 0 1-.59 0L1 1.486V10h14V1.487zM1 0h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1z"></path></svg></button>
+                  <button class="bx--btn bx--btn--primary" onclick="window.location.href='enregistre-vehicule-step-4.html'" style="margin:8px;"
+                  type="button">Notification
+                  <svg width="14" height="16" viewBox="0 0 14 16"><path d="M11.199 9.9a.5.5 0 0 1-.2-.4V6.23a4 4 0 0 0-3.99-4A3.989 3.989 0 0 0 3.01 6.206L3 9.52a.5.5 0 0 1-.202.4L1 11.252V13h12v-1.75L11.199 9.9zM4.55 14H.5a.5.5 0 0 1-.5-.5V11a.5.5 0 0 1 .202-.402l1.799-1.333.01-3.062A4.99 4.99 0 0 1 6.5 1.254V0h1v1.254a5 5 0 0 1 4.498 4.975v3.02L13.8 10.6a.5.5 0 0 1 .2.4v2.5a.5.5 0 0 1-.5.5H9.45a2.5 2.5 0 0 1-4.9 0zm1.035 0a1.5 1.5 0 0 0 2.83 0h-2.83z"></path></svg>
+                </button>
+
+              </div>
+            </div>
+            <br><br><br>
+      </div>
+      <div class="bx--col-md-12">
+        <br />
+        <br />
+
+
+        <nav role="navigation" aria-label="Interior Left Navigation" data-interior-left-nav onclick="toggleSideNav()" class="bx--interior-left-nav bx--interior-left-nav--collapseable">
+          <ul role="menubar" class="left-nav-list" data-interior-left-nav-list aria-label="left nav list" aria-hidden="false">
+            <li role="menuitem" tabindex="0" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link">
+                Immatriculer un véhicule
+              </a>
+            </li>
+            <li role="menuitem" tabindex="1" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link">
+                Consulter une plaque d'immatriculation
+              </a>
+            </li>
+            <li role="menuitem" tabindex="2" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link">
+                Annuler ou remplacer une plaque
+              </a>
+            </li>
+            <li role="menuitem" tabindex="3" class="left-nav-list__item" data-interior-left-nav-item>
+              <a class="left-nav-list__item-link">
+                Plaque personnalisée
+              </a>
+            </li>
+          </ul>
+          <div class="bx--interior-left-nav-collapse" data-interior-left-nav-collapse>
+            <a class="bx--interior-left-nav-collapse__link" href="#" aria-label="collapse nav pane">
+              <svg class="bx--interior-left-nav-collapse__arrow" width="8" height="12" viewBox="0 0 8 12" fill-rule="evenodd" data-interior-left-nav-arrow>
+                <title>Collapse nav pane</title>
+                <path d="M7.5 10.6L2.8 6l4.7-4.6L6.1 0 0 6l6.1 6z"></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+
+        <div class="bx--grid" id="main-content">
+          
+          <div class="bx--row">
+            <div class="bx--col-xs-12 ">
+                <br />
+                <nav class="bx--breadcrumb bx--breadcrumb--no-trailing-slash" aria-label="breadcrumb">
+                  <div class="bx--breadcrumb-item">
+                    <a href="#" class="bx--link">Accueil</a>
+                  </div>
+                  <div class="bx--breadcrumb-item">
+                    <a href="#" class="bx--link">Immatriculer</a>
+                  </div>
+                  <div class="bx--breadcrumb-item">
+                    <a href="#" class="bx--link">Nouvelle immatriculation</a>
+                  </div>
+                  <div class="bx--breadcrumb-item">
+                  </div>
+                </nav>
+                <br>
+              <h1>Création d’un certificat CVM</h1>
+              <br>
+              <br>
+            </div>
+          </div>
+          <div class="bx--row">
+            <div class="bx--col-xs-12">
+                <ul data-progress data-progress-current class="bx--progress">
+                    <li class="bx--progress-step bx--progress-step--complete">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="12"></circle>
+                            <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
+                          </svg>
+                      <p class="bx--progress-label">Véhicule</p>
+                      <span class="bx--progress-line"></span>
+                    </li>
+                    <li class="bx--progress-step bx--progress-step--complete">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="12"></circle>
+                            <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
+                          </svg>
+                      <p class="bx--progress-label">Rapport</p>
+                      <span class="bx--progress-line"></span>
+                    </li>
+                    <li class="bx--progress-step bx--progress-step--complete">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="12"></circle>
+                            <polygon points="10.3 13.6 7.7 11 6.3 12.4 10.3 16.4 17.8 9 16.4 7.6"></polygon>
+                          </svg>
+                      <p class="bx--progress-label">Conformité</p>
+                      <span class="bx--progress-line"></span>
+                    </li>
+                    <li class="bx--progress-step bx--progress-step--current">
+                        <svg>
+                            <circle cx="12" cy="12" r="12"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                          </svg>
+                      <p class="bx--progress-label">Résumé</p>
+                      <span class="bx--progress-line"></span>
+                    </li>
+                    <li class="bx--progress-step bx--progress-step--incomplete">
+                      <svg>
+                        <circle cx="12" cy="12" r="12"></circle>
+                      </svg>
+                      <p class="bx--progress-label">Confirmation</p>
+                      <span class="bx--progress-line"></span>
+                    </li>
+                  </ul>
+            </div>
+          </div>
+
+          <div class="bx--row">
+              <div class="bx--col-xs-12">
+                <br><br>
+                <div class="bx--data-table-v2-container" data-table-v2>
+                  <h4 class="bx--data-table-v2-header">Identification du véhicule</h4>
+                  <table class="bx--data-table-v2">
+                    <thead>
+                      <tr>
+                        <th>Numéro du CVM</th>
+                        <th>########</th>
+                      </tr>
+                    </thead>
+                    <!-- <tbody>
+                      <tr class="expandable-row">
+                        <td>Numéro de référence du permis de conduire</td>
+                        <td>M5601-160777-05</td>
+                      </tr>
+                      <tr class="expandable-row">
+                        <td>Numéro de dossier</td>
+                        <td>B1122110521</td>
+                      </tr>
+                      <tr class="expandable-row">
+                        <td>Nom du représentant
+                        </td>
+                        <td> </td>
+                      </tr>
+                    </tbody> -->
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="bx--row">
+                <div class="bx--col-xs-12">
+                  <br><br>
+                  <div class="bx--data-table-v2-container" data-table-v2>
+                    <h4 class="bx--data-table-v2-header">Détails du véhicule</h4>
+                    <table class="bx--data-table-v2">
+                      <thead>
+                        <tr>
+                          <th>Marque</th>
+                          <th>Freig</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="expandable-row">
+                          <td>Modèle</td>
+                          <td>CHA</td>
+                        </tr>
+                        <tr class="expandable-row">
+                          <td>Année</td>
+                          <td>2003</td>
+                        </tr>
+                        <tr class="expandable-row">
+                          <td>Numéro de la plaque d’immatriculation</td>
+                          <td>A12345</td>
+                        </tr>
+                        <tr class="expandable-row">
+                            <td>Numéro d’identification du véhicule (NIV) Type de véhicule Rapport</td>
+                            <td>012345678</td>
+                          </tr>
+                          <tr class="expandable-row">
+                              <td>Type de véhicule</td>
+                              <td>Autobus</td>
+                            </tr>
+                            <tr class="expandable-row">
+                                <td>Numéro d’unité</td>
+                                <td> </td>
+                              </tr>
+                              <tr class="expandable-row">
+                                  <td>Province, territoire ou État qui a délivré l’immatriculation</td>
+                                  <td> </td>
+                                </tr>
+                                <tr class="expandable-row">
+                                    <td>Masse nette (en kg)</td>
+                                    <td></td>
+                                  </tr>
+                                  <tr class="expandable-row">
+                                      <td>Numéro de dossier inscrit sur le certificat d’immatriculation</td>
+                                      <td> </td>
+                                    </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <br><br>
+                </div>
+              </div>
+              
+              <div class="bx--row">
+                <div class="bx--col-xs-12">
+                    <h4>Vérification mécanique</h4>
+                  <br>
+                    <div class="bx--data-table-v2-container" data-table-v2>
+                        <h5 class="bx--data-table-v2-header">Éclairage et signalisation</h5>
+                        <table class="bx--data-table-v2 bx--data-table-v2--zebra">
+                          <thead>
+                            <tr>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span class="bx--table-header-label">Localisation</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span>Code</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span>Composante</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span>Conformité</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span>Défectuosité mineure</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span>Défectuosité majeure</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span>Nature de la défectuosité</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="expandable-row">
+                              <td>15</td>
+                              <td>5</td>
+                              <td>Lampe</td>
+                              <td></td>
+                              <td></td>
+                              <td>Oui</td>
+                              <td>R</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+              </div>
+
+              <div class="bx--row">
+              <div class="bx--col-xs-12">
+
+              <br>
+              <div class="bx--data-table-v2-container" data-table-v2>
+              <h5 class="bx--data-table-v2-header">Freins</h5>
+              <table class="bx--data-table-v2 bx--data-table-v2--zebra">
+              <thead>
+                <tr>
+                  <th>
+                    <button class="bx--table-sort-v2" data-event="sort">
+                      <span class="bx--table-header-label">Localisation</span>
+                      <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                        <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </th>
+                  <th>
+                    <button class="bx--table-sort-v2" data-event="sort">
+                      <span>Code</span>
+                      <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                        <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </th>
+                  <th>
+                    <button class="bx--table-sort-v2" data-event="sort">
+                      <span>Composante</span>
+                      <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                        <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </th>
+                  <th>
+                    <button class="bx--table-sort-v2" data-event="sort">
+                      <span>Conformité</span>
+                      <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                        <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </th>
+                  <th>
+                    <button class="bx--table-sort-v2" data-event="sort">
+                      <span>Défectuosité mineure</span>
+                      <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                        <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </th>
+                  <th>
+                    <button class="bx--table-sort-v2" data-event="sort">
+                      <span>Défectuosité majeure</span>
+                      <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                        <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </th>
+                  <th>
+                    <button class="bx--table-sort-v2" data-event="sort">
+                      <span>Nature de la défectuosité</span>
+                      <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                        <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                      </svg>
+                    </button>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="expandable-row">
+                  <td>15</td>
+                  <td>5</td>
+                  <td>Lampe</td>
+                  <td></td>
+                  <td></td>
+                  <td>Oui</td>
+                  <td>R</td>
+                </tr>
+              </tbody>
+              </table>
+              </div>
+              </div>
+              </div>
+
+              <div class="bx--row">
+              <div class="bx--col-xs-12">
+              <br>
+              <div class="bx--data-table-v2-container" data-table-v2>
+              <h5 class="bx--data-table-v2-header">Vitrage et rétroviseurs</h5>
+              <table class="bx--data-table-v2 bx--data-table-v2--zebra">
+                <thead>
+                  <tr>
+                    <th>
+                      <button class="bx--table-sort-v2" data-event="sort">
+                        <span class="bx--table-header-label">Localisation</span>
+                        <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                          <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                        </svg>
+                      </button>
+                    </th>
+                    <th>
+                      <button class="bx--table-sort-v2" data-event="sort">
+                        <span>Code</span>
+                        <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                          <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                        </svg>
+                      </button>
+                    </th>
+                    <th>
+                      <button class="bx--table-sort-v2" data-event="sort">
+                        <span>Composante</span>
+                        <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                          <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                        </svg>
+                      </button>
+                    </th>
+                    <th>
+                      <button class="bx--table-sort-v2" data-event="sort">
+                        <span>Conformité</span>
+                        <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                          <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                        </svg>
+                      </button>
+                    </th>
+                    <th>
+                      <button class="bx--table-sort-v2" data-event="sort">
+                        <span>Défectuosité mineure</span>
+                        <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                          <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                        </svg>
+                      </button>
+                    </th>
+                    <th>
+                      <button class="bx--table-sort-v2" data-event="sort">
+                        <span>Défectuosité majeure</span>
+                        <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                          <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                        </svg>
+                      </button>
+                    </th>
+                    <th>
+                      <button class="bx--table-sort-v2" data-event="sort">
+                        <span>Nature de la défectuosité</span>
+                        <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                          <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                        </svg>
+                      </button>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="expandable-row">
+                    <td>15</td>
+                    <td>5</td>
+                    <td>Lampe</td>
+                    <td></td>
+                    <td></td>
+                    <td>Oui</td>
+                    <td>R</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+              </div>
+              </div>
+
+              <div class="bx--row">
+              <div class="bx--col-xs-12">
+
+              <br>
+              <div class="bx--data-table-v2-container" data-table-v2>
+                <h5 class="bx--data-table-v2-header">Échappement</h5>
+                <table class="bx--data-table-v2 bx--data-table-v2--zebra">
+                  <thead>
+                    <tr>
+                      <th>
+                        <button class="bx--table-sort-v2" data-event="sort">
+                          <span class="bx--table-header-label">Localisation</span>
+                          <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                            <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                          </svg>
+                        </button>
+                      </th>
+                      <th>
+                        <button class="bx--table-sort-v2" data-event="sort">
+                          <span>Code</span>
+                          <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                            <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                          </svg>
+                        </button>
+                      </th>
+                      <th>
+                        <button class="bx--table-sort-v2" data-event="sort">
+                          <span>Composante</span>
+                          <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                            <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                          </svg>
+                        </button>
+                      </th>
+                      <th>
+                        <button class="bx--table-sort-v2" data-event="sort">
+                          <span>Conformité</span>
+                          <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                            <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                          </svg>
+                        </button>
+                      </th>
+                      <th>
+                        <button class="bx--table-sort-v2" data-event="sort">
+                          <span>Défectuosité mineure</span>
+                          <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                            <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                          </svg>
+                        </button>
+                      </th>
+                      <th>
+                        <button class="bx--table-sort-v2" data-event="sort">
+                          <span>Défectuosité majeure</span>
+                          <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                            <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                          </svg>
+                        </button>
+                      </th>
+                      <th>
+                        <button class="bx--table-sort-v2" data-event="sort">
+                          <span>Nature de la défectuosité</span>
+                          <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                            <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                          </svg>
+                        </button>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="expandable-row">
+                      <td>15</td>
+                      <td>5</td>
+                      <td>Lampe</td>
+                      <td></td>
+                      <td></td>
+                      <td>Oui</td>
+                      <td>R</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              </div>
+              </div>
+
+              <div class="bx--row">
+              <div class="bx--col-xs-12">
+
+              <br>
+              <div class="bx--data-table-v2-container" data-table-v2>
+                  <h5 class="bx--data-table-v2-header">Suspension</h5>
+                  <table class="bx--data-table-v2 bx--data-table-v2--zebra">
+                    <thead>
+                      <tr>
+                        <th>
+                          <button class="bx--table-sort-v2" data-event="sort">
+                            <span class="bx--table-header-label">Localisation</span>
+                            <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                              <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </th>
+                        <th>
+                          <button class="bx--table-sort-v2" data-event="sort">
+                            <span>Code</span>
+                            <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                              <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </th>
+                        <th>
+                          <button class="bx--table-sort-v2" data-event="sort">
+                            <span>Composante</span>
+                            <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                              <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </th>
+                        <th>
+                          <button class="bx--table-sort-v2" data-event="sort">
+                            <span>Conformité</span>
+                            <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                              <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </th>
+                        <th>
+                          <button class="bx--table-sort-v2" data-event="sort">
+                            <span>Défectuosité mineure</span>
+                            <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                              <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </th>
+                        <th>
+                          <button class="bx--table-sort-v2" data-event="sort">
+                            <span>Défectuosité majeure</span>
+                            <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                              <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </th>
+                        <th>
+                          <button class="bx--table-sort-v2" data-event="sort">
+                            <span>Nature de la défectuosité</span>
+                            <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                              <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                            </svg>
+                          </button>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="expandable-row">
+                        <td>15</td>
+                        <td>5</td>
+                        <td>Lampe</td>
+                        <td></td>
+                        <td></td>
+                        <td>Oui</td>
+                        <td>R</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              </div>
+
+              <div class="bx--row">
+              <div class="bx--col-xs-12">
+
+              <br>
+                <div class="bx--data-table-v2-container" data-table-v2>
+                    <h5 class="bx--data-table-v2-header">Pneus - roues</h5>
+                    <table class="bx--data-table-v2 bx--data-table-v2--zebra">
+                      <thead>
+                        <tr>
+                          <th>
+                            <button class="bx--table-sort-v2" data-event="sort">
+                              <span class="bx--table-header-label">Localisation</span>
+                              <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                              </svg>
+                            </button>
+                          </th>
+                          <th>
+                            <button class="bx--table-sort-v2" data-event="sort">
+                              <span>Code</span>
+                              <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                              </svg>
+                            </button>
+                          </th>
+                          <th>
+                            <button class="bx--table-sort-v2" data-event="sort">
+                              <span>Composante</span>
+                              <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                              </svg>
+                            </button>
+                          </th>
+                          <th>
+                            <button class="bx--table-sort-v2" data-event="sort">
+                              <span>Conformité</span>
+                              <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                              </svg>
+                            </button>
+                          </th>
+                          <th>
+                            <button class="bx--table-sort-v2" data-event="sort">
+                              <span>Défectuosité mineure</span>
+                              <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                              </svg>
+                            </button>
+                          </th>
+                          <th>
+                            <button class="bx--table-sort-v2" data-event="sort">
+                              <span>Défectuosité majeure</span>
+                              <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                              </svg>
+                            </button>
+                          </th>
+                          <th>
+                            <button class="bx--table-sort-v2" data-event="sort">
+                              <span>Nature de la défectuosité</span>
+                              <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                              </svg>
+                            </button>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="expandable-row">
+                          <td>15</td>
+                          <td>5</td>
+                          <td>Lampe</td>
+                          <td></td>
+                          <td></td>
+                          <td>Oui</td>
+                          <td>R</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+              </div>
+
+              <div class="bx--row">
+              <div class="bx--col-xs-12">
+                
+                <br>
+                  <div class="bx--data-table-v2-container" data-table-v2>
+                      <h5 class="bx--data-table-v2-header">Cadre/dessous de caisse</h5>
+                      <table class="bx--data-table-v2 bx--data-table-v2--zebra">
+                        <thead>
+                          <tr>
+                            <th>
+                              <button class="bx--table-sort-v2" data-event="sort">
+                                <span class="bx--table-header-label">Localisation</span>
+                                <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                  <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                </svg>
+                              </button>
+                            </th>
+                            <th>
+                              <button class="bx--table-sort-v2" data-event="sort">
+                                <span>Code</span>
+                                <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                  <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                </svg>
+                              </button>
+                            </th>
+                            <th>
+                              <button class="bx--table-sort-v2" data-event="sort">
+                                <span>Composante</span>
+                                <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                  <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                </svg>
+                              </button>
+                            </th>
+                            <th>
+                              <button class="bx--table-sort-v2" data-event="sort">
+                                <span>Conformité</span>
+                                <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                  <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                </svg>
+                              </button>
+                            </th>
+                            <th>
+                              <button class="bx--table-sort-v2" data-event="sort">
+                                <span>Défectuosité mineure</span>
+                                <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                  <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                </svg>
+                              </button>
+                            </th>
+                            <th>
+                              <button class="bx--table-sort-v2" data-event="sort">
+                                <span>Défectuosité majeure</span>
+                                <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                  <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                </svg>
+                              </button>
+                            </th>
+                            <th>
+                              <button class="bx--table-sort-v2" data-event="sort">
+                                <span>Nature de la défectuosité</span>
+                                <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                  <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                </svg>
+                              </button>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="expandable-row">
+                            <td>15</td>
+                            <td>5</td>
+                            <td>Lampe</td>
+                            <td></td>
+                            <td></td>
+                            <td>Oui</td>
+                            <td>R</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+              </div>
+              </div>
+
+              <div class="bx--row">
+                <div class="bx--col-xs-12">
+                  
+                  <br>
+                    <div class="bx--data-table-v2-container" data-table-v2>
+                        <h5 class="bx--data-table-v2-header">Carrosserie</h5>
+                        <table class="bx--data-table-v2 bx--data-table-v2--zebra">
+                          <thead>
+                            <tr>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span class="bx--table-header-label">Localisation</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span>Code</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span>Composante</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span>Conformité</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span>Défectuosité mineure</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span>Défectuosité majeure</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                              <th>
+                                <button class="bx--table-sort-v2" data-event="sort">
+                                  <span>Nature de la défectuosité</span>
+                                  <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                    <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="expandable-row">
+                              <td>15</td>
+                              <td>5</td>
+                              <td>Lampe</td>
+                              <td></td>
+                              <td></td>
+                              <td>Oui</td>
+                              <td>R</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+              </div>
+
+              <div class="bx--row">
+                  <div class="bx--col-xs-12">
+                    
+                    <br>
+                      <div class="bx--data-table-v2-container" data-table-v2>
+                          <h5 class="bx--data-table-v2-header">Accessoires</h5>
+                          <table class="bx--data-table-v2 bx--data-table-v2--zebra">
+                            <thead>
+                              <tr>
+                                <th>
+                                  <button class="bx--table-sort-v2" data-event="sort">
+                                    <span class="bx--table-header-label">Localisation</span>
+                                    <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                      <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                    </svg>
+                                  </button>
+                                </th>
+                                <th>
+                                  <button class="bx--table-sort-v2" data-event="sort">
+                                    <span>Code</span>
+                                    <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                      <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                    </svg>
+                                  </button>
+                                </th>
+                                <th>
+                                  <button class="bx--table-sort-v2" data-event="sort">
+                                    <span>Composante</span>
+                                    <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                      <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                    </svg>
+                                  </button>
+                                </th>
+                                <th>
+                                  <button class="bx--table-sort-v2" data-event="sort">
+                                    <span>Conformité</span>
+                                    <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                      <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                    </svg>
+                                  </button>
+                                </th>
+                                <th>
+                                  <button class="bx--table-sort-v2" data-event="sort">
+                                    <span>Défectuosité mineure</span>
+                                    <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                      <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                    </svg>
+                                  </button>
+                                </th>
+                                <th>
+                                  <button class="bx--table-sort-v2" data-event="sort">
+                                    <span>Défectuosité majeure</span>
+                                    <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                      <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                    </svg>
+                                  </button>
+                                </th>
+                                <th>
+                                  <button class="bx--table-sort-v2" data-event="sort">
+                                    <span>Nature de la défectuosité</span>
+                                    <svg class="bx--table-sort-v2__icon" width="10" height="5" viewBox="0 0 10 5">
+                                      <path d="M0 0l5 4.998L10 0z" fill-rule="evenodd" />
+                                    </svg>
+                                  </button>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="expandable-row">
+                                <td>15</td>
+                                <td>5</td>
+                                <td>Lampe</td>
+                                <td></td>
+                                <td></td>
+                                <td>Oui</td>
+                                <td>R</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                  </div>
+                </div>
+
+
+                <div class="bx--row">
+                    <div class="bx--col-xs-12">
+                      <br><br>
+                      <div class="bx--data-table-v2-container" data-table-v2>
+                        <h4 class="bx--data-table-v2-header">Détails</h4>
+                        <table class="bx--data-table-v2">
+                          <thead>
+                            <tr>
+                              <th>Début de la vérification</th>
+                              <th>HH:MM</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="expandable-row">
+                              <td>Fin de la vérification</td>
+                              <td>HH:MM</td>
+                            </tr>
+                            <tr class="expandable-row">
+                              <td>Remarque complémentaire</td>
+                              <td>Remarque</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <br><br>
+                    </div>
+                  </div>
+
+                  <div class="bx--row">
+                      <div class="bx--col-xs-12">
+                        <br><br>
+                        <div class="bx--data-table-v2-container" data-table-v2>
+                          <h4 class="bx--data-table-v2-header">Conformité</h4>
+                          <table class="bx--data-table-v2">
+                            <thead>
+                              <tr>
+                                <th>Conformité</th>
+                                <th>Conforme</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="expandable-row">
+                                <td>Date de conformité</td>
+                                <td>YYYY-MM-DD</td>
+                              </tr>
+                              <tr class="expandable-row">
+                                <td>Heure de conformité</td>
+                                <td>HH:MM</td>
+                              </tr>
+                              <tr class="expandable-row">
+                                  <td>Nom de destinataire</td>
+                                  <td>Nom</td>
+                                </tr>
+                                <tr class="expandable-row">
+                                    <td>Nom du mécanicien</td>
+                                    <td>Nom</td>
+                                  </tr>
+                                  <tr class="expandable-row">
+                                      <td>Numéro de la vignette remise</td>
+                                      <td>3311111111</td>
+                                    </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <br><br>
+                      </div>
+                    </div>
+          
+
+          <div class="bx--row">
+            <div class="bx--col-xs-12">
+              <br>
+              <br>
+              <div class="footer">
+                <div style="float: left;">
+                  <p style="margin-left:1em;margin-top:1em;"> Aide?
+                    <strong>Réponse.
+                      <a href="#" class="bx--link">Lien</a>
+                    </strong>
+                  </p>
+                </div>
+                <div style="text-align: right">
+                  <a href="vm-step-5.html" class="bx--link">Étape précèdente</a>
+                  <span style="margin-right: 4px; margin-bottom: 4px;"></span>
+                  <button class="bx--btn bx--btn--primary" onclick="window.location.href='vm-step-7.html'" style="margin:8px;" type="button">Prochaine étape</button>
+
+                </div>
+              </div>
+              <br><br>
+            </div>
+          </div>
+
+        </div>
+        <!-- End of div .bx--grid-->
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="scripts/libs/bootstrap/bootstrap.js"></script>
+  <script src="../css-js/saaq-components.js"></script>
+  <script>
+    var openSideNav = false;
+    toggleSideNav();
+
+    function toggleSideNav() {
+      //document.getElementById("mySidenav").style.width = "250px";
+      if (openSideNav == true) {
+        document.getElementById("main-content").style.marginLeft = "5%";
+        openSideNav = false;
+        console.log("NAV CLOSED");
+      } else {
+        document.getElementById("main-content").style.marginLeft = "17%";
+        openSideNav = true;
+        console.log("NAV OPENED");
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
