@@ -526,7 +526,6 @@ data = JSON.parse(JSON.stringify(data_1));
         var pageIndex = current_page_nb-1
         
         for (var i = 0; i < sortedDataSet[pageIndex].length; i++) {
-
           table_data_html += ("<tr class=\"expandable-row\"><td>"+sortedDataSet[pageIndex][i].vehicule+"</td><td>"+sortedDataSet[pageIndex][i].date_creation+"</td>"+"</td><td>"+sortedDataSet[pageIndex][i].statut+"</td><td><a href=\"#\">"+sortedDataSet[pageIndex][i].action+"</a></td></tr>");
         }
 
@@ -561,15 +560,19 @@ data = JSON.parse(JSON.stringify(data_1));
 
     </script>
 
-<script>
+<!-- <script>
     function mySearchFunction() {
-      var input, filter, table, tr, td, i;
+      var input, filter, table, tr, td, td_list;
       input = document.getElementById("search__input");
       filter = input.value.toUpperCase();
       table = document.getElementById("enregistrer-historic-table");
       tr = table.getElementsByTagName("tr");
       for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
+        if (td){
+          for (j = 0; j < td.length; j++){
+            td_list = tr[i].getElementsByTagName("td")[j];
+        }
+        
         if (td) {
           if ((td.innerHTML.toUpperCase().indexOf(filter) > -1)) {
             tr[i].style.display = "";
@@ -579,6 +582,14 @@ data = JSON.parse(JSON.stringify(data_1));
         }       
       }
     }
+    </script> -->
+
+    <script>
+      // search through all data instances and fields
+      // build the new data set
+      // populate the table
+
+    
     </script>
 
 </body>
