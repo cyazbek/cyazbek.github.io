@@ -6,28 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Event Theme</title>
 
+ 
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet"> 
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-         @font-face { font-family: Avenger; src: url('/Avenger.ttf'); }
+        } 
 
         html {
             width: 100vw;
             height: 100vh;
         }
         body {
-            background: url("super-heros1.jpg") no-repeat center;
+            
             width: 100vw;
             min-height: 100%;            
         }
        
 
         h1{
-            font-family: Avenger;
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 3rem
         }
         #myVideo {
             position: fixed;
@@ -36,6 +38,14 @@
             min-width: 100%; 
             min-height: 100%;
             z-index: -1;
+        }
+        #my_theme{
+            background: url("super-heros1.jpg") no-repeat center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: -10;
         }
 
         #canvasOne {
@@ -54,7 +64,8 @@
             <source src="movie.mp4" type="video/mp4">
         </video> -->
 
-              
+        <div id="my_theme"></div>
+
     
     <script>
                 window.addEventListener('load', eventWindowLoaded, false);
