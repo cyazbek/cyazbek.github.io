@@ -1045,6 +1045,11 @@ body
     color: #fff;
 }
 
+.intro--options > a span
+{
+    color: #da3737;
+}
+
 .intro--options > a:hover span
 {
     color: #da3737;
