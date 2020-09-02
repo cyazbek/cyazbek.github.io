@@ -12570,4 +12570,16 @@ footer .copyright-social ul li:last-child {
   color: #000;
 }
 
+.handwriting{
+  font-family: test;
+}
+
+@font-face { 
+  font-family: test; 
+  src: url('../fonts/NoviScript.otf');
+  size: 3em;
+}
+
+
+
 /*# sourceMappingURL=style.css.map */
